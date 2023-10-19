@@ -2,3 +2,195 @@
 @model WebApplication_StandardInventDays.Pages.ViewModel
 @{
 }
+
+<div class="container-fluid p-0">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="header-tittle">
+                <h2>View Data</h2>
+                <p>Welcome User</p>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <div class="flex-fill w-100 h-100 mb-10">
+        <div class="ViewTable">
+            <table class="display" border="0" id="view-table">
+                <thead>
+                    <tr>
+                        <th class ="no-column">No</th>
+                        <th class="fac-column">Fac</th>
+                        <th class="itemno-column">Item No</th>
+                        <th class="itemdesc-column">Item Description</th>
+                        <th>UoM</th>
+                        <th>Vendor Type</th>
+                        <th>Prod Lead Time</th>
+                        <th>Monthly Consume</th>
+                        <th>Capacity Different</th>
+                        <th>Delivery Cycle</th>
+                        <th class="consume-column">Consume</th>
+                        <th>Reject</th>
+                        <th>MoQ</th>
+                        <th>Std Inventory Days</th>
+                        <th class="action-column">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Fac 1</td>
+                        <td>Item001</td>
+                        <td>Product 1</td>
+                        <td>PCS</td>
+                        <td>Vendor A</td>
+                        <td>5</td>
+                        <td>1000</td>
+                        <td>10%</td>
+                        <td>30</td>
+                        <td>950000</td>
+                        <td>50</td>
+                        <td>200</td>
+                        <td>15</td>
+                        <td>
+                            <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a> |
+                            <a href="#" class="delete-icon"><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Fac 2</td>
+                        <td>Item001</td>
+                        <td>Product 1</td>
+                        <td>PCS</td>
+                        <td>Vendor A</td>
+                        <td>5</td>
+                        <td>1000</td>
+                        <td>10%</td>
+                        <td>30</td>
+                        <td>950000</td>
+                        <td>50</td>
+                        <td>200</td>
+                        <td>15</td>
+                        <td>
+                            <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a> |
+                            <a href="#" class="delete-icon"><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Fac 3</td>
+                        <td>Item001</td>
+                        <td>Product 1</td>
+                        <td>PCS</td>
+                        <td>Vendor A</td>
+                        <td>5</td>
+                        <td>1000</td>
+                        <td>10%</td>
+                        <td>30</td>
+                        <td>950000</td>
+                        <td>50</td>
+                        <td>200</td>
+                        <td>15</td>
+                        <td>
+                            <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a> |
+                            <a href="#" class="delete-icon"><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Fac 4</td>
+                        <td>Item001</td>
+                        <td>Product 1</td>
+                        <td>PCS</td>
+                        <td>Vendor A</td>
+                        <td>5</td>
+                        <td>1000</td>
+                        <td>10%</td>
+                        <td>30</td>
+                        <td>950000</td>
+                        <td>50</td>
+                        <td>200</td>
+                        <td>15</td>
+                        <td>
+                            <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a> |
+                            <a href="#" class="delete-icon"><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Fac 5</td>
+                        <td>Item001</td>
+                        <td>Product 1</td>
+                        <td>PCS</td>
+                        <td>Vendor A</td>
+                        <td>5</td>
+                        <td>1000</td>
+                        <td>10%</td>
+                        <td>30</td>
+                        <td>950000</td>
+                        <td>50</td>
+                        <td>200</td>
+                        <td>15</td>
+                        <td>
+                            <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a> |
+                            <a href="#" class="delete-icon"><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Fac 6</td>
+                        <td>Item001</td>
+                        <td>Product 1</td>
+                        <td>PCS</td>
+                        <td>Vendor A</td>
+                        <td>5</td>
+                        <td>1000</td>
+                        <td>10%</td>
+                        <td>30</td>
+                        <td>950000</td>
+                        <td>50</td>
+                        <td>200</td>
+                        <td>15</td>
+                        <td>
+                            <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a> |
+                            <a href="#" class="delete-icon"><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+
+                    
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@*<div class="dark-mode-toggle">
+    <input type="checkbox" id="dark-mode-toggle" />
+    <label for="dark-mode-toggle"></label>
+</div>*@
+
+
+
+<script type="text/javascript">
+    var js = jQuery.noConflict(true);
+    js(document).ready(function () {
+        js('#view-table').DataTable({
+            "paging": false,
+            "columnDefs": [
+                { "orderable": true, "targets": [0, 2, 3, 4, 5, 13] }, // Enable sorting for the first column (index 0)
+                { "orderable": false, "targets": "_all" } // Disable sorting for all other columns
+            ]
+        });
+        js('.dataTables_filter input').attr('placeholder', 'Search...');
+        js('.dataTables_filter label').prepend('<i class="fa fa-search"></i> ');
+    });
+</script>
+
+@*
+"columnDefs": [
+                { "targets": [14], "orderable": false, "searchable": false }
+            ]
+*@

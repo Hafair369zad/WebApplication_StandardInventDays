@@ -8,14 +8,27 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebApplication_StandardInventDays.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <meta charset="UTF-8">
-    
 
+    <!-- Datatables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.css" />
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <!-- DataTables Bootstrap Integration -->
+    <link rel="stylesheet" href="/DataTables/datatables.css" />
+    <script src="/DataTables/datatables.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
    
@@ -42,7 +55,7 @@
             <div class="profile">
                 <img src="https://media.licdn.com/dms/image/D5603AQEXBz2yrnamzA/profile-displayphoto-shrink_800_800/0/1671033866134?e=2147483647&v=beta&t=Fcyvxhkckw6cvOo2WoK3cBBJByCE7COf9yL43goufgI" alt="profile_picture">
                 <h5>Muhammad Hamdan</h5>
-                <p>7001121 (ISC-PMI)</p>
+                <p>M10071 (ISC-PMI)</p>
             </div>
             <ul id="nav_accordion">
                 <li>
@@ -124,143 +137,3 @@
 
 
 
-@*<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebApplication_StandardInventDays</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/WebApplication_StandardInventDays.styles.css" asp-append-version="true" />
-
-    <!-- Tambahkan file CSS terpisah -->
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-        <!-- Tombol hamburger -->
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <button class="navbar-toggler" type="button" id="sidebarToggle">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" asp-area="" asp-page="/Index">WebApplication_StandardInventDays</a>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <ul class="navbar-nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="/Add_Data">Add Data</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="/DownloadToExcel">Download To Excel</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="/View">View</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="/ReportMonthly">Report Monthly</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - WebApplication_StandardInventDays - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Tambahkan file JavaScript terpisah -->
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
-</html>
-*@
-
-
-@*<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebApplication_StandardInventDays</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/WebApplication_StandardInventDays.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-</head>
-<body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <ul class="navbar-nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="/Index">Dashboard</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="/Add_Data">Add Data</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="/DownloadToExcel">Download To Excel</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="/View">View</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="/ReportMonthly">Report Monthly</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Konten -->
-    <div class="content">
-        <header>
-            <nav class="navbar navbar-light bg-white border-bottom box-shadow mb-3">
-                <div class="container">
-                    <button class="navbar-toggler" type="button" id="sidebarToggle">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <a class="navbar-brand" asp-area="" asp-page="/Index">WebApplication_StandardInventDays</a>
-                </div>
-            </nav>
-        </header>
-
-        <div class="container">
-            <main role="main" class="pb-3">
-                @RenderBody()
-            </main>
-        </div>
-
-
-    </div>
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-</body>
-</html>*@
-
-
-<!--Design by foolishdeveloper.com-->

@@ -1,4 +1,191 @@
 ﻿@page
 @model WebApplication_StandardInventDays.Pages.DownloadToExcelModel
 @{
+
+    
 }
+
+
+
+
+<div class="container-fluid p-0">
+    <div class="d-flex justify-content-between ">
+        <div class="header-tittle" style="margin-bottom: 30px;">
+            <h2>Download To Excel</h2>
+            <p>Welcome User</p>
+        </div>
+        <div class="text-size-buttons">
+            <button id="increase-text-size"><i class="fas fa-search-plus"></i></button>
+            <button id="decrease-text-size"><i class="fas fa-search-minus"></i></button>
+        </div>
+    </div>
+
+
+    <div class="flex-fill w-100 h-100 mb-10">
+        <div class="ViewTable">
+            <table class="ViewExcel" border="0">
+                <thead>
+                    <tr>
+                        <th class="no-column">No</th>
+                        <th class="fac-column">Fac</th>
+                        <th class="itemno-column">Item No</th>
+                        <th class="itemdesc-column">Item Description</th>
+                        <th>UoM</th>
+                        <th>Vendor Type</th>
+                        <th>Prod Lead Time</th>
+                        <th>Monthly Consume</th>
+                        <th>Capacity Different</th>
+                        <th>Delivery Cycle</th>
+                        <th class="consume-column">Consume</th>
+                        <th>Reject</th>
+                        <th>MoQ</th>
+                        <th>Std Inventory Days</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Fac 1</td>
+                        <td>Item001</td>
+                        <td>Product 1</td>
+                        <td>PCS</td>
+                        <td>Vendor A</td>
+                        <td>5</td>
+                        <td>1000</td>
+                        <td>10%</td>
+                        <td>30</td>
+                        <td>950000</td>
+                        <td>50</td>
+                        <td>200</td>
+                        <td>15</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Fac 2</td>
+                        <td>Item001</td>
+                        <td>Product 1</td>
+                        <td>PCS</td>
+                        <td>Vendor A</td>
+                        <td>5</td>
+                        <td>1000</td>
+                        <td>10%</td>
+                        <td>30</td>
+                        <td>950000</td>
+                        <td>50</td>
+                        <td>200</td>
+                        <td>15</td>
+                       
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Fac 3</td>
+                        <td>Item001</td>
+                        <td>Product 1</td>
+                        <td>PCS</td>
+                        <td>Vendor A</td>
+                        <td>5</td>
+                        <td>1000</td>
+                        <td>10%</td>
+                        <td>30</td>
+                        <td>950000</td>
+                        <td>50</td>
+                        <td>200</td>
+                        <td>15</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Fac 4</td>
+                        <td>Item001</td>
+                        <td>Product 1</td>
+                        <td>PCS</td>
+                        <td>Vendor A</td>
+                        <td>5</td>
+                        <td>1000</td>
+                        <td>10%</td>
+                        <td>30</td>
+                        <td>950000</td>
+                        <td>50</td>
+                        <td>200</td>
+                        <td>15</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Fac 5</td>
+                        <td>Item001</td>
+                        <td>Product 1</td>
+                        <td>PCS</td>
+                        <td>Vendor A</td>
+                        <td>5</td>
+                        <td>1000</td>
+                        <td>10%</td>
+                        <td>30</td>
+                        <td>950000</td>
+                        <td>50</td>
+                        <td>200</td>
+                        <td>15</td>
+                        
+                    <tr>
+                        <td>6</td>
+                        <td>Fac 6</td>
+                        <td>Item001</td>
+                        <td>Product 1</td>
+                        <td>PCS</td>
+                        <td>Vendor A</td>
+                        <td>5</td>
+                        <td>1000</td>
+                        <td>10%</td>
+                        <td>30</td>
+                        <td>950000</td>
+                        <td>50</td>
+                        <td>200</td>
+                        <td>15</td>
+                        
+                    </tr>
+
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <div class="download-float-button">
+        <button id="open-popup">Download <i class="fas fa-download"></i></button>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <div class="popup-header">
+                    <h3>Select File Format</h3>
+                    <a id="close-popup" class="btn close-popup">&times;</a>
+                </div>
+                <div class="popup-body">
+                    <select id="file-format">
+                        <option value=".xls">.xls</option>
+                        <option value=".xlsx">.xlsx</option>
+                        <option value=".csv">.csv</option>
+                    </select>
+                    <button id="download-button">Download File Excel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="~/js/DownloadToExcel.js" asp-append-version="true"></script>
+
+</div>
+
+
+
+
+
+
+
+
+

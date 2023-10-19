@@ -6,7 +6,7 @@
     <div class="container-fluid p-0">
         <div class="row">
             <div class="col-md-6">
-                <div class="header-tittle">
+                <div class="header-tittle" style="margin-bottom: 50px;">
                     <h2>Add Data</h2>
                     <p>Welcome User</p>
                 </div>
@@ -23,86 +23,117 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="upload-form">
-                                <div class="form-group row">
-                                    <label for="facInput" class="col-form-label col-md-3">Fac:</label>
-                                    <div class="col-md-9">
-                                        <input type="text" class="form-control" id="facInput" name="fac" placeholder="Enter Fac">
-                                    </div>
+                            <div class="form-group row">
+                                <label for="facInput" class="col-form-label col-md-3">Fac</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="facInput" name="fac" placeholder="Enter Fac">
                                 </div>
-                                <div class="form-group row">
-                                    <label for="listInput" class="col-form-label col-md-3">Select Option:</label>
-                                    <div class="col-md-9">
-                                        <select class="form-control" id="listInput" name="listOption">
-                                            <option value="ALL">ALL</option>
-                                            <option value="IMP">IMP</option>
-                                            <option value="LOC">LOC</option>
-                                        </select>
-                                    </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="listInput" class="col-form-label col-md-3">Item Number</label>
+                                <div class="col-md-9">
+                                    <select class="form-control" id="listInput" name="itemNo">
+                                        <option value="ALL">ALL</option>
+                                    </select>
                                 </div>
-                                <div class="form-group row">
-                                    <label for="facInput" class="col-form-label col-md-3">Fac:</label>
-                                    <div class="col-md-9">
-                                        <input type="text" class="form-control" id="facInput" name="fac" placeholder="Enter Fac">
-                                    </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="facInput" class="col-form-label col-md-3">Item Desc</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="facInput" name="itemDesc" placeholder="Enter Item Desc">
                                 </div>
-                                <div class="form-group row">
-                                    <label for="facInput" class="col-form-label col-md-3">Fac:</label>
-                                    <div class="col-md-9">
-                                        <input type="text" class="form-control" id="facInput" name="fac" placeholder="Enter Fac">
-                                    </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="facInput" class="col-form-label col-md-3">UoM</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="facInput" name="UoM" placeholder="Enter UoM">
                                 </div>
+                            </div>
+                            <div class="form-group row">
+                            <label for="listInput" class="col-form-label col-md-3">Vendor Type</label>
+                            <div class="col-md-9">
+                                <select class="form-control" id="listInput" name="vendorType">
+                                    <option value="IMP">IMP</option>
+                                    <option value="LOC">LOC</option>
+                                </select>
+                            </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="facInput" class="col-form-label col-md-3">Production Lead Time</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="facInput" name="prodLT" placeholder="Enter Production Lead Time">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="facInput" class="col-form-label col-md-3">Monthly Consume</label>
+                                <div class="col-md-9">
+                                <input type="text" class="form-control" id="facInput" name="monthlyConsume" placeholder="Enter Monthly Consume">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="facInput" class="col-form-label col-md-3">Capacity Different</label>
+                                <div class="col-md-9">
+                                <input type="text" class="form-control" id="facInput" name="capacityDifferent" placeholder="Enter Capacity Different">
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="upload-form">
+                            
                             <div class="form-group row">
-                                <label for="deliveryCycleInput" class="col-form-label col-md-3">Delivery Cycle:</label>
+                                <label for="deliveryCycleInput" class="col-form-label col-md-3">Delivery Cycle</label>
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" id="deliveryCycleInput" name="deliveryCycle" placeholder="Enter Delivery Cycle">
+                                <input type="text" class="form-control" id="deliveryCycleInput" name="deliveryCycle" placeholder="Enter Delivery Cycle">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="deliveryCycleInput" class="col-form-label col-md-3">Delivery Cycle:</label>
+                                <label for="deliveryCycleInput" class="col-form-label col-md-3">Consumption</label>
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" id="deliveryCycleInput" name="deliveryCycle" placeholder="Enter Delivery Cycle">
+                                <input type="text" class="form-control" id="deliveryCycleInput" name="consumption" placeholder="Enter Consumption">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                    <label for="deliveryCycleInput" class="col-form-label col-md-3">Delivery Cycle:</label>
-                                    <div class="col-md-9">
-                                        <input type="text" class="form-control" id="deliveryCycleInput" name="deliveryCycle" placeholder="Enter Delivery Cycle">
-                                    </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="deliveryCycleInput" class="col-form-label col-md-3">Delivery Cycle:</label>
+                                <label for="deliveryCycleInput" class="col-form-label col-md-3">Reject</label>
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" id="deliveryCycleInput" name="deliveryCycle" placeholder="Enter Delivery Cycle">
+                                <input type="text" class="form-control" id="deliveryCycleInput" name="reject" placeholder="Enter Reject">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="deliveryCycleInput" class="col-form-label col-md-3">Delivery Cycle:</label>
+                                <label for="deliveryCycleInput" class="col-form-label col-md-3">MoQ</label>
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" id="deliveryCycleInput" name="deliveryCycle" placeholder="Enter Delivery Cycle">
+                                <input type="text" class="form-control" id="deliveryCycleInput" name="MoQ" placeholder="Enter MoQ">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="deliveryCycleInput" class="col-form-label col-md-3">Delivery Cycle:</label>
+                                <label for="listInput" class="col-form-label col-md-3">Formula</label>
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" id="deliveryCycleInput" name="deliveryCycle" placeholder="Enter Delivery Cycle">
+                                <select class="form-control" id="listInput" name="formula">
+                                    <option value="">-Pilihan-</option>
+                                    <option value="Formula1">Formula 1</option>
+                                    <option value="Formula2">Formula 2</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                            <label for="hasil" class="col-form-label col-md-3">Hasil</label>
+                                <div class="col-md-9">
+                                <input type="text" class="form-control" id="hasil" name="hasil" placeholder="" readonly>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="button-AddData">
-                            <a href="" class="btn btn-primary">Add Data</a>
-                            <a href="" class="btn btn-success">Process</a>
-                            <a href="" class="btn btn-danger">Clear</a>
+                            <a href="" class="btn btn-primary" id="processButton">Process</a>
+                            <a href="" class="btn btn-danger" id="clearButton">Clear</a>
+                            <input type="submit" class="btn btn-success" value="Simpan">
                         </div>
                     </div>
                 </div>
