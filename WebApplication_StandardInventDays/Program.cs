@@ -1,4 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using WebApplication_StandardInventDays.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddDbContext<SidprojectDBContext>(options =>
+    options.UseSqlServer(builder.Configuration
+    .GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 builder.Services.AddRazorPages();

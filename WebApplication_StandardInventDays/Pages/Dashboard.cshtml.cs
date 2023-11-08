@@ -7,6 +7,7 @@ namespace WebApplication_StandardInventDays.Pages
     {
         public void OnGet()
         {
+
         }
     }
 }

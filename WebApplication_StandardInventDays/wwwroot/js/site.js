@@ -258,7 +258,31 @@ $(document).ready(function () {
 
 
 
+// Delete SID Popup
+//$(document).ready(function () {
+//    // Tambahkan event click pada setiap tombol delete
+//    $("[id^='deleteBtn-']").click(function () {
+//        var idSid = this.id.split('-')[1]; // Ambil ID SID dari tombol delete
+//        $.ajax({
+//            url: '/DeleteSID?id=' + idSid, // Ganti dengan URL yang benar
+//            type: 'GET',
+//            success: function (data) {
+//                // Isi konten popup dengan data yang diambil dari server
+//                $("#deleteSIDPopup").html(data);
+//                // Tampilkan popup
+//                $("#deleteSIDPopup").show();
+//            }
+//        });
+//    });
 
+//    // Tambahkan event click pada tombol "Delete" di dalam popup
+//    $("#deleteSIDPopup").on("click", "input[type=submit]", function () {
+//        // Lakukan operasi delete di sini, jika diperlukan
+//        // Setelah selesai, sembunyikan popup
+//        $("#deleteSIDPopup").hide();
+//    });
+//});
+// End Delete SID Popup 
 
 
  // Dark Mode 

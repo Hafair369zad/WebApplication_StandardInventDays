@@ -1,0 +1,118 @@
+﻿@page
+@model WebApplication_StandardInventDays.Pages.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Sid</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.Fac)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.Fac)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.ItemNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.ItemNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.ItemDesc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.ItemDesc)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.UoM)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.UoM)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.VendorType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.VendorType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.ProdLt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.ProdLt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.MonthlyConsume)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.MonthlyConsume)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.SupplyCapacity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.SupplyCapacity)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.CapacityDifferent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.CapacityDifferent)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.DeliveryCycle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.DeliveryCycle)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.Consumption)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.Consumption)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.Reject)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.Reject)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.MoQ)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.MoQ)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.Hasil)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.Hasil)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.Remark)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.Remark)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.IdMatListNavigation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.IdMatListNavigation.IdMatList)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Sid.IdSid" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./View">Back to List</a>
+    </form>
+</div>

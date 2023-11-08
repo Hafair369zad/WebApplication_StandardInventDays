@@ -1,0 +1,110 @@
+﻿@page
+@model WebApplication_StandardInventDays.Pages.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Sid</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Sid.IdSid" />
+            <div class="form-group">
+                <label asp-for="Sid.IdMatList" class="control-label"></label>
+                <select asp-for="Sid.IdMatList" class="form-control" asp-items="ViewBag.IdMatList"></select>
+                <span asp-validation-for="Sid.IdMatList" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sid.Fac" class="control-label"></label>
+                <input asp-for="Sid.Fac" class="form-control" />
+                <span asp-validation-for="Sid.Fac" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sid.ItemNo" class="control-label"></label>
+                <input asp-for="Sid.ItemNo" class="form-control" />
+                <span asp-validation-for="Sid.ItemNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sid.ItemDesc" class="control-label"></label>
+                <input asp-for="Sid.ItemDesc" class="form-control" />
+                <span asp-validation-for="Sid.ItemDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sid.UoM" class="control-label"></label>
+                <input asp-for="Sid.UoM" class="form-control" />
+                <span asp-validation-for="Sid.UoM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sid.VendorType" class="control-label"></label>
+                <input asp-for="Sid.VendorType" class="form-control" />
+                <span asp-validation-for="Sid.VendorType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sid.ProdLt" class="control-label"></label>
+                <input asp-for="Sid.ProdLt" class="form-control" />
+                <span asp-validation-for="Sid.ProdLt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sid.MonthlyConsume" class="control-label"></label>
+                <input asp-for="Sid.MonthlyConsume" class="form-control" />
+                <span asp-validation-for="Sid.MonthlyConsume" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sid.SupplyCapacity" class="control-label"></label>
+                <input asp-for="Sid.SupplyCapacity" class="form-control" />
+                <span asp-validation-for="Sid.SupplyCapacity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sid.CapacityDifferent" class="control-label"></label>
+                <input asp-for="Sid.CapacityDifferent" class="form-control" />
+                <span asp-validation-for="Sid.CapacityDifferent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sid.DeliveryCycle" class="control-label"></label>
+                <input asp-for="Sid.DeliveryCycle" class="form-control" />
+                <span asp-validation-for="Sid.DeliveryCycle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sid.Consumption" class="control-label"></label>
+                <input asp-for="Sid.Consumption" class="form-control" />
+                <span asp-validation-for="Sid.Consumption" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sid.Reject" class="control-label"></label>
+                <input asp-for="Sid.Reject" class="form-control" />
+                <span asp-validation-for="Sid.Reject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sid.MoQ" class="control-label"></label>
+                <input asp-for="Sid.MoQ" class="form-control" />
+                <span asp-validation-for="Sid.MoQ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sid.Hasil" class="control-label"></label>
+                <input asp-for="Sid.Hasil" class="form-control" />
+                <span asp-validation-for="Sid.Hasil" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sid.Remark" class="control-label"></label>
+                <input asp-for="Sid.Remark" class="form-control" />
+                <span asp-validation-for="Sid.Remark" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

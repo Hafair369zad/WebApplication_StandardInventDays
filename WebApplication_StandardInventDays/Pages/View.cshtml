@@ -20,7 +20,49 @@
             <table class="display" border="0" id="view-table">
                 <thead>
                     <tr>
-                        <th class ="no-column">No</th>
+                        @*<th class ="no-column">No</th>
+                        <th class="fac-column">
+                            @Html.DisplayNameFor(model => model.Sid[0].Fac)
+                        </th>
+                        <th class="itemno-column">
+                            @Html.DisplayNameFor(model => model.Sid[0].ItemNo)
+                        </th>
+                        <th class="itemdesc-column">
+                            @Html.DisplayNameFor(model => model.Sid[0].ItemDesc)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Sid[0].UoM)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Sid[0].VendorType)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Sid[0].ProdLt)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Sid[0].MonthlyConsume)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Sid[0].CapacityDifferent)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Sid[0].DeliveryCycle)
+                        </th>
+                        <th class="consume-column">
+                            @Html.DisplayNameFor(model => model.Sid[0].Consumption)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Sid[0].Reject)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Sid[0].MoQ)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Sid[0].Hasil)
+                        </th>
+                        <th class="action-column">Action</th>*@
+
+                        <th class="no-column">No</th>
                         <th class="fac-column">Fac</th>
                         <th class="itemno-column">Item No</th>
                         <th class="itemdesc-column">Item Description</th>
@@ -37,134 +79,67 @@
                         <th class="action-column">Action</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Fac 1</td>
-                        <td>Item001</td>
-                        <td>Product 1</td>
-                        <td>PCS</td>
-                        <td>Vendor A</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>10%</td>
-                        <td>30</td>
-                        <td>950000</td>
-                        <td>50</td>
-                        <td>200</td>
-                        <td>15</td>
-                        <td>
-                            <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a> |
-                            <a href="#" class="delete-icon"><i class="fas fa-trash-alt"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Fac 2</td>
-                        <td>Item001</td>
-                        <td>Product 1</td>
-                        <td>PCS</td>
-                        <td>Vendor A</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>10%</td>
-                        <td>30</td>
-                        <td>950000</td>
-                        <td>50</td>
-                        <td>200</td>
-                        <td>15</td>
-                        <td>
-                            <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a> |
-                            <a href="#" class="delete-icon"><i class="fas fa-trash-alt"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Fac 3</td>
-                        <td>Item001</td>
-                        <td>Product 1</td>
-                        <td>PCS</td>
-                        <td>Vendor A</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>10%</td>
-                        <td>30</td>
-                        <td>950000</td>
-                        <td>50</td>
-                        <td>200</td>
-                        <td>15</td>
-                        <td>
-                            <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a> |
-                            <a href="#" class="delete-icon"><i class="fas fa-trash-alt"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Fac 4</td>
-                        <td>Item001</td>
-                        <td>Product 1</td>
-                        <td>PCS</td>
-                        <td>Vendor A</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>10%</td>
-                        <td>30</td>
-                        <td>950000</td>
-                        <td>50</td>
-                        <td>200</td>
-                        <td>15</td>
-                        <td>
-                            <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a> |
-                            <a href="#" class="delete-icon"><i class="fas fa-trash-alt"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Fac 5</td>
-                        <td>Item001</td>
-                        <td>Product 1</td>
-                        <td>PCS</td>
-                        <td>Vendor A</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>10%</td>
-                        <td>30</td>
-                        <td>950000</td>
-                        <td>50</td>
-                        <td>200</td>
-                        <td>15</td>
-                        <td>
-                            <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a> |
-                            <a href="#" class="delete-icon"><i class="fas fa-trash-alt"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Fac 6</td>
-                        <td>Item001</td>
-                        <td>Product 1</td>
-                        <td>PCS</td>
-                        <td>Vendor A</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>10%</td>
-                        <td>30</td>
-                        <td>950000</td>
-                        <td>50</td>
-                        <td>200</td>
-                        <td>15</td>
-                        <td>
-                            <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a> |
-                            <a href="#" class="delete-icon"><i class="fas fa-trash-alt"></i></a>
-                        </td>
-                    </tr>
-
+                <tbody>                             
+                    @foreach (var item in Model.Sid)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IdSid)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Fac)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ItemNo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ItemDesc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UoM)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.VendorType)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ProdLt)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MonthlyConsume)
+                            </td>                         
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CapacityDifferent)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DeliveryCycle)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Consumption)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Reject)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MoQ)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Hasil)
+                            </td>                          
+                            <td>
+                                <a asp-page="./EditSID" asp-route-id="@item.IdSid" class="edit-icon"><i class="fas fa-edit"></i></a> |
+                                <a asp-page="./DeleteSID" asp-route-id="@item.IdSid" class="delete-icon"><i class="fas fa-trash-alt" id="deleteBtn-@item.IdSid"></i></a>
+                            </td>
+                        </tr>
+                    }
                     
 
                 </tbody>
             </table>
         </div>
     </div>
+    @*<div id="deleteSIDPopup" style="display: none;">
+        <div class="card"><h1>Coba Konten</h1></div>
+    </div>*@
 </div>
 
 @*<div class="dark-mode-toggle">

@@ -20,94 +20,124 @@
             </div>
 
             <form id="myForm" asp-action="Add_Data" enctype="multipart/form-data" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="upload-form">
-                            <div class="form-group row">
-                                <label for="facInput" class="col-form-label col-md-3">Fac</label>
-                                <div class="col-md-9">
-                                    <input type="text" class="form-control" id="facInput" name="fac" placeholder="Enter Fac">
+                           @* <div class="form-group row">                            
+                                <label asp-for="Sid.IdSid" class="col-form-label col-md-3">ID</label>
+                                <div class="col-md-9">                             
+                                    <input asp-for="Sid.IdSid" class="form-control" />
+                                    <span asp-validation-for="Sid.IdSid" class="text-danger"></span>
                                 </div>
                             </div>
+                            <div class="form-group row">                             
+                                <label asp-for="Sid.IdMatList" class="col-form-label col-md-3">ID MathList</label>
+                                <div class="col-md-9">                              
+                                    <select asp-for="Sid.IdMatList" class="form-control" asp-items="ViewBag.IdMatList"></select>
+                                </div>
+                            </div>*@
                             <div class="form-group row">
-                                <label for="listInput" class="col-form-label col-md-3">Item Number</label>
+                            <label asp-for="Sid.Fac" class="col-form-label col-md-3">Fac</label>
+                            <div class="col-md-9">
+                                    <input asp-for="Sid.Fac" class="form-control" placeholder="Enter Fac">
+                                    <span asp-validation-for="Sid.Fac" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="Sid.ItemNo" class="col-form-label col-md-3">Item Number</label>
+                                <div class="col-md-9">                               
+                                    <select asp-for="Sid.ItemNo" class="form-control" asp-items="ViewBag.ItemNo"></select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="Sid.ItemDesc" class="col-form-label col-md-3">Item Desc</label>
                                 <div class="col-md-9">
-                                    <select class="form-control" id="listInput" name="itemNo">
-                                        <option value="ALL">ALL</option>
+                                    <input asp-for="Sid.ItemDesc" class="form-control" placeholder="Enter Item Desc">
+                                    <span asp-validation-for="Sid.ItemDesc" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="Sid.UoM" class="col-form-label col-md-3">UoM</label>
+                                <div class="col-md-9">
+                                    <input asp-for="Sid.UoM" class="form-control" placeholder="Enter UoM">
+                                    <span asp-validation-for="Sid.UoM" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="Sid.VendorType" for="listInput" class="col-form-label col-md-3">Vendor Type</label>
+                                <div class="col-md-9">
+                                    <select asp-for="Sid.VendorType" asp-items="ViewBag.VendorType" class="form-control" id="listInput">
+                                        <option value="IMP">IMP</option>
+                                        <option value="LOC">LOC</option>
                                     </select>
                                 </div>
                             </div>
+
                             <div class="form-group row">
-                                <label for="facInput" class="col-form-label col-md-3">Item Desc</label>
+                            <label asp-for="Sid.ProdLt" class="col-form-label col-md-3">Production Lead Time</label>
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" id="facInput" name="itemDesc" placeholder="Enter Item Desc">
+                                    <input asp-for="Sid.ProdLt" class="form-control" placeholder="Enter Production Lead Time">
+                                    <span asp-validation-for="Sid.ProdLt" class="text-danger"></span>
                                 </div>
                             </div>
+
                             <div class="form-group row">
-                                <label for="facInput" class="col-form-label col-md-3">UoM</label>
+                                <label asp-for="Sid.MonthlyConsume" class="col-form-label col-md-3">Monthly Consume</label>
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" id="facInput" name="UoM" placeholder="Enter UoM">
+                                    <input  asp-for="Sid.MonthlyConsume" type="text" class="form-control" placeholder="Enter Monthly Consume">
+                                    <span asp-validation-for="Sid.MonthlyConsume" class="text-danger"></span>
                                 </div>
                             </div>
+
                             <div class="form-group row">
-                            <label for="listInput" class="col-form-label col-md-3">Vendor Type</label>
-                            <div class="col-md-9">
-                                <select class="form-control" id="listInput" name="vendorType">
-                                    <option value="IMP">IMP</option>
-                                    <option value="LOC">LOC</option>
-                                </select>
-                            </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="facInput" class="col-form-label col-md-3">Production Lead Time</label>
+                                <label asp-for="Sid.CapacityDifferent" class="col-form-label col-md-3">Capacity Different</label>
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" id="facInput" name="prodLT" placeholder="Enter Production Lead Time">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="facInput" class="col-form-label col-md-3">Monthly Consume</label>
-                                <div class="col-md-9">
-                                <input type="text" class="form-control" id="facInput" name="monthlyConsume" placeholder="Enter Monthly Consume">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="facInput" class="col-form-label col-md-3">Capacity Different</label>
-                                <div class="col-md-9">
-                                <input type="text" class="form-control" id="facInput" name="capacityDifferent" placeholder="Enter Capacity Different">
+                                    <input asp-for="Sid.CapacityDifferent" class="form-control" placeholder="Enter Capacity Different">
+                                    <span asp-validation-for="Sid.CapacityDifferent" class="text-danger"></span>
                                 </div>
                             </div>
 
                         </div>
                     </div>
 
+
                     <div class="col-md-6">
                         <div class="upload-form">
                             
                             <div class="form-group row">
-                                <label for="deliveryCycleInput" class="col-form-label col-md-3">Delivery Cycle</label>
+                                <label asp-for ="Sid.DeliveryCycle" class="col-form-label col-md-3">Delivery Cycle</label>
                                 <div class="col-md-9">
-                                <input type="text" class="form-control" id="deliveryCycleInput" name="deliveryCycle" placeholder="Enter Delivery Cycle">
+                                    <input asp-for="Sid.DeliveryCycle" class="form-control"  placeholder="Enter Delivery Cycle">
+                                    <span asp-validation-for="Sid.DeliveryCycle" class="text-danger"></span>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="deliveryCycleInput" class="col-form-label col-md-3">Consumption</label>
+                                <label asp-for="Sid.Consumption" class="col-form-label col-md-3">Consumption</label>
                                 <div class="col-md-9">
-                                <input type="text" class="form-control" id="deliveryCycleInput" name="consumption" placeholder="Enter Consumption">
+                                    <input asp-for="Sid.Consumption" class="form-control" placeholder="Enter Consumption">
+                                    <span asp-validation-for="Sid.Consumption" class="text-danger"></span>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="deliveryCycleInput" class="col-form-label col-md-3">Reject</label>
+                                <label asp-for="Sid.Reject" class="col-form-label col-md-3">Reject</label>
                                 <div class="col-md-9">
-                                <input type="text" class="form-control" id="deliveryCycleInput" name="reject" placeholder="Enter Reject">
+                                    <input asp-for="Sid.Reject" class="form-control" placeholder="Enter Reject">
+                                    <span asp-validation-for="Sid.Reject" class="text-danger"></span>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="deliveryCycleInput" class="col-form-label col-md-3">MoQ</label>
+                                <label asp-for="Sid.MoQ" class="col-form-label col-md-3">MoQ</label>
                                 <div class="col-md-9">
-                                <input type="text" class="form-control" id="deliveryCycleInput" name="MoQ" placeholder="Enter MoQ">
+                                    <input asp-for="Sid.MoQ" class="form-control" placeholder="Enter MoQ">
+                                    <span asp-validation-for="Sid.MoQ" class="text-danger"></span>
                                 </div>
                             </div>
 
@@ -123,11 +153,12 @@
                             </div>
 
                             <div class="form-group row">
-                            <label for="hasil" class="col-form-label col-md-3">Hasil</label>
+                                <label asp-for="Sid.Hasil" for="hasil" class="col-form-label col-md-3">Hasil</label>
                                 <div class="col-md-9">
-                                <input type="text" class="form-control" id="hasil" name="hasil" placeholder="" readonly>
+                                    <input asp-for="Sid.Hasil" type="text" class="form-control" id="hasil" placeholder="" readonly>
                                 </div>
                             </div>
+
                         </div>
                         
                         <div class="button-AddData">

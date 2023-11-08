@@ -1,0 +1,115 @@
+﻿@page
+@model WebApplication_StandardInventDays.Pages.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Sid</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.Fac)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.Fac)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.ItemNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.ItemNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.ItemDesc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.ItemDesc)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.UoM)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.UoM)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.VendorType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.VendorType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.ProdLt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.ProdLt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.MonthlyConsume)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.MonthlyConsume)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.SupplyCapacity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.SupplyCapacity)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.CapacityDifferent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.CapacityDifferent)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.DeliveryCycle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.DeliveryCycle)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.Consumption)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.Consumption)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.Reject)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.Reject)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.MoQ)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.MoQ)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.Hasil)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.Hasil)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.Remark)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.Remark)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid.IdMatListNavigation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sid.IdMatListNavigation.IdMatList)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Sid?.IdSid">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

@@ -1,16 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using WebApplication_StandardInventDays.Data;
 using WebApplication_StandardInventDays.Models;
 
-namespace WebApplication_StandardInventDays.Pages
+namespace WebApplication_StandardInventDays.Pages.AddData
 {
-    public class ViewModel : PageModel
+    public class IndexModel : PageModel
     {
         private readonly SidprojectDBContext _context;
 
-        public ViewModel(SidprojectDBContext context)
+        public IndexModel(SidprojectDBContext context)
         {
             _context = context;
         }

@@ -329,7 +329,7 @@ body.active .wrapper .section {
     background: white;
     border: 1px solid;
     border-color: #dddddd; /* Warna border */
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Efek shadow */
 }
 
@@ -338,8 +338,8 @@ body.active .wrapper .section {
         padding-bottom: 5px;
         text-align: center;
         background: #33363F;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
     }
     
 
@@ -413,6 +413,13 @@ body.active .wrapper .section {
         font-weight: 600;
         width: 100px;
     }
+    .button-AddData a#cancelButton {
+        border-color: #bd0c0cf2;
+        margin-right: 10px;
+        border-radius: 6px;
+        font-weight: 600;
+        width: 100px;
+    }
     .button-AddData a#clearButton {
         border-color: #bd0c0cf2;
         margin-right: 10px;
@@ -425,6 +432,7 @@ body.active .wrapper .section {
         border-radius: 6px;
         font-weight: 600;
         width: 100px;
+        margin-right: 10px; 
     }
 
 @media (max-width: 767px) {
@@ -453,11 +461,18 @@ body.active .wrapper .section {
             width: 150px;
         }
 
+        .button-AddData a#cancelButton {
+            margin-bottom: 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            width: 150px;
+        }
         .button-AddData a#clearButton {
             margin-bottom: 20px;
             border-radius: 6px;
             font-weight: 600;
             width: 150px;
+            margin-right: -10px;
         }
 
         .button-AddData input {
@@ -466,6 +481,7 @@ body.active .wrapper .section {
             font-weight: 600;
             width: 150px;
             margin-left: -10px;
+            margin-right: 10px;
         }
 }
 
@@ -762,7 +778,7 @@ body.active .wrapper .section {
 .card-cr .header-form-info {
    
     background: #33363F;
-    border-radius: 10px;
+    border-radius: 7px;
     display: flex;
     justify-content: center; /* Mengatur konten horizontal di tengah */
     align-items: center;
@@ -1069,5 +1085,5 @@ body.dark-mode {
 
 
 
-
+   
    

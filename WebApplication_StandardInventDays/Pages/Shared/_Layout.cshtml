@@ -43,6 +43,7 @@
             </div>
             <div class="content">
                 @RenderBody()
+                @*@RenderSection("Scripts", required: false)*@
             </div>
         </div>
 
@@ -59,7 +60,7 @@
             </div>
             <ul id="nav_accordion">
                 <li>
-                    <a asp-area="" asp-page="/Dashboard">
+                    <a asp-area="" asp-page="/Index">
                         <span class="icon"><i class="fas fa-th-list"></i></span>
                         <span class="item">Dashboard</span>
                     </a>
@@ -109,6 +110,12 @@
                         <span class="item">Information</span>
                     </a>
                 </li>
+             @*   <li>
+                    <a asp-area="" asp-page="/AddData/Create">
+                        <span class="icon"><i class="fas fa-info-circle"></i></span>
+                        <span class="item">Add CRUD</span>
+                    </a>
+                </li>*@
                 @*<li>
                     <a asp-area="" asp-page="/Settings">
                         <span class="icon"><i class="fas fa-cog"></i></span>

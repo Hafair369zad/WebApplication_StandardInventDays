@@ -1,0 +1,126 @@
+﻿@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="/AddData/Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Sid[0].Fac)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sid[0].ItemNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sid[0].ItemDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sid[0].UoM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sid[0].VendorType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sid[0].ProdLt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sid[0].MonthlyConsume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sid[0].SupplyCapacity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sid[0].CapacityDifferent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sid[0].DeliveryCycle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sid[0].Consumption)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sid[0].Reject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sid[0].MoQ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sid[0].Hasil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sid[0].Remark)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sid[0].IdMatListNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Sid) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fac)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UoM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdLt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MonthlyConsume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupplyCapacity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CapacityDifferent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeliveryCycle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Consumption)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoQ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hasil)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdMatListNavigation.IdMatList)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.IdSid">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdSid">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdSid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
