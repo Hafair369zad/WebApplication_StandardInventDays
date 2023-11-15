@@ -17,12 +17,22 @@ namespace WebApplication_StandardInventDays.Pages
 
         public IActionResult OnGet()
         {
-            ViewData["IdMatList"] = new SelectList(_context.MaterialLists, "IdMatList", "IdMatList");
+            var materialListItems = _context.MaterialLists.Select(ml => ml.ItemNo).Distinct().ToList();
+            ViewData["ItemNo"] = new SelectList(materialListItems);
+
+            // Fetch initial values for Fac and ItemNo from the database
+            var initialMaterialList = _context.MaterialLists.FirstOrDefault();
+
+            // Use null-conditional operator to safely assign values
+            Sid.Fac = initialMaterialList?.Fac ?? string.Empty;
+            Sid.ItemNo = initialMaterialList?.ItemNo ?? string.Empty;
+
             return Page();
         }
 
+
         [BindProperty]
-        public Sid Sid { get; set; } = default!;
+        public Sid Sid { get; set; } = new Sid();
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -36,5 +46,43 @@ namespace WebApplication_StandardInventDays.Pages
 
             return RedirectToPage("./View");
         }
+
+        public JsonResult OnGetGetMaterialList(string itemNo)
+        {
+            // Retrieve MaterialList data based on the selected 'ItemNo'
+            var materialList = _context.MaterialLists.FirstOrDefault(ml => ml.ItemNo == itemNo);
+
+            return new JsonResult(new
+            {
+                ItemDesc = materialList?.ItemDesc,
+                UoM = materialList?.UoM
+            });
+        }
     }
 }
+
+
+
+
+//public IActionResult OnGet()
+//{
+//    ViewData["IdMatList"] = new SelectList(_context.MaterialLists, "IdMatList", "IdMatList");
+//    return Page();
+//}
+
+//public JsonResult OnGetGetMaterialList(string itemNo)
+//{
+//    // Retrieve MaterialList data based on the selected 'ItemNo'
+//    var materialList = _context.MaterialLists.FirstOrDefault(ml => ml.ItemNo == itemNo);
+
+//    return new JsonResult(new
+//    {
+//        Fac = materialList?.Fac,
+//        ItemDesc = materialList?.ItemDesc,
+//        UoM = materialList?.UoM
+//    });
+//}
+
+
+
+

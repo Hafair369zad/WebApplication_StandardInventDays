@@ -67,17 +67,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Form Ouput Hasil
-$("#processButton").click(function (e) {
-    e.preventDefault(); 
-    var hasil = "120"; 
-    $("#hasil").val(hasil);
-});
+//$("#processButton").click(function (e) {
+//    e.preventDefault();
+//    var hasil = "120";
+//    $("#hasil").val(hasil);
+//});
 
-$("#clearButton").click(function (e) {
-    e.preventDefault(); 
-    $("form")[0].reset(); 
-    $("#hasil").val(""); 
-});
+//$("#clearButton").click(function (e) {
+//    e.preventDefault();
+//    $("form")[0].reset();
+//    $("#hasil").val("");
+//});
+
+
 
 // End Output Hasil
 
@@ -258,6 +260,11 @@ $(document).ready(function () {
 
 
 
+// Process Add_Data
+
+// End Proccess Add_Data
+
+
 // Delete SID Popup
 //$(document).ready(function () {
 //    // Tambahkan event click pada setiap tombol delete
@@ -282,7 +289,14 @@ $(document).ready(function () {
 //        $("#deleteSIDPopup").hide();
 //    });
 //});
-// End Delete SID Popup 
+// End Delete SID Popup
+
+
+
+// Start Fiture Download Excel
+// End Fiture Download Excel 
+
+
 
 
  // Dark Mode 

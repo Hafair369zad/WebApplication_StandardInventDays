@@ -28,6 +28,6 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapRazorPages();
+app.MapRazorPages(); // pengaktifan razor pages 
 
 app.Run();

@@ -25,5 +25,8 @@ namespace WebApplication_StandardInventDays.Pages
                 .Include(s => s.IdMatListNavigation).ToListAsync();
             }
         }
+
+
+        
     }
 }
