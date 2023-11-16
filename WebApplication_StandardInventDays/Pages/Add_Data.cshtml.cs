@@ -34,6 +34,8 @@ namespace WebApplication_StandardInventDays.Pages
         [BindProperty]
         public Sid Sid { get; set; } = new Sid();
 
+
+        
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid || _context.Sids == null || Sid == null)
@@ -44,8 +46,9 @@ namespace WebApplication_StandardInventDays.Pages
             _context.Sids.Add(Sid);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./View");
+            return RedirectToPage("/View");
         }
+
 
         public JsonResult OnGetGetMaterialList(string itemNo)
         {

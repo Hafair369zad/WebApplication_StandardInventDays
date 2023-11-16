@@ -53,8 +53,39 @@ document.getElementById('close-popup').addEventListener('click', function () {
 document.getElementById('download-button').addEventListener('click', function () {
     console.log('Download button clicked');
     const selectedFormat = document.getElementById('file-format').value;
-    alert(`Downloading file in format: ${selectedFormat}`);
-    // Setelah unduhan selesai, tutup popup dan sembunyikan overlay
-    document.getElementById('popup').style.display = 'none';
-    document.getElementById('overlay').style.display = 'none';
+
+    // Create form data
+    const formData = new FormData();
+    formData.append('fileFormat', selectedFormat);
+
+    // Trigger the download action on the server
+    fetch('DownloadToExcel?handler=Download', {
+        method: 'POST',
+        body: formData // Use form data here
+    })
+        .then(response => {
+            console.log('Response Status:', response.status);
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.statusText}`);
+            }
+            return response.blob();
+        })
+        .then(blob => {
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `SID_Data_${new Date().toISOString().slice(0, 19).replace(/:/g, "")}.${selectedFormat}`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        })
+        .finally(() => {
+            // Close the popup and hide the overlay after download or error
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        });
 });

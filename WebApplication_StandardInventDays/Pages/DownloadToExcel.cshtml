@@ -1,11 +1,8 @@
 ﻿@page
 @model WebApplication_StandardInventDays.Pages.DownloadToExcelModel
 @{
-
-    
+    int No = 1;
 }
-
-
 
 
 <div class="container-fluid p-0">
@@ -44,110 +41,55 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Fac 1</td>
-                        <td>Item001</td>
-                        <td>Product 1</td>
-                        <td>PCS</td>
-                        <td>Vendor A</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>10%</td>
-                        <td>30</td>
-                        <td>950000</td>
-                        <td>50</td>
-                        <td>200</td>
-                        <td>15</td>
-                        
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Fac 2</td>
-                        <td>Item001</td>
-                        <td>Product 1</td>
-                        <td>PCS</td>
-                        <td>Vendor A</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>10%</td>
-                        <td>30</td>
-                        <td>950000</td>
-                        <td>50</td>
-                        <td>200</td>
-                        <td>15</td>
-                       
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Fac 3</td>
-                        <td>Item001</td>
-                        <td>Product 1</td>
-                        <td>PCS</td>
-                        <td>Vendor A</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>10%</td>
-                        <td>30</td>
-                        <td>950000</td>
-                        <td>50</td>
-                        <td>200</td>
-                        <td>15</td>
-                        
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Fac 4</td>
-                        <td>Item001</td>
-                        <td>Product 1</td>
-                        <td>PCS</td>
-                        <td>Vendor A</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>10%</td>
-                        <td>30</td>
-                        <td>950000</td>
-                        <td>50</td>
-                        <td>200</td>
-                        <td>15</td>
-                        
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Fac 5</td>
-                        <td>Item001</td>
-                        <td>Product 1</td>
-                        <td>PCS</td>
-                        <td>Vendor A</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>10%</td>
-                        <td>30</td>
-                        <td>950000</td>
-                        <td>50</td>
-                        <td>200</td>
-                        <td>15</td>
-                        
-                    <tr>
-                        <td>6</td>
-                        <td>Fac 6</td>
-                        <td>Item001</td>
-                        <td>Product 1</td>
-                        <td>PCS</td>
-                        <td>Vendor A</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>10%</td>
-                        <td>30</td>
-                        <td>950000</td>
-                        <td>50</td>
-                        <td>200</td>
-                        <td>15</td>
-                        
-                    </tr>
+                    @foreach (var item in Model.Sid)
+                    {
+                        <tr>
+                            <td>
+                                @No
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Fac)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ItemNo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ItemDesc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UoM)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.VendorType)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ProdLt)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MonthlyConsume)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CapacityDifferent)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DeliveryCycle)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Consumption)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Reject)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MoQ)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Hasil)
+                            </td>                         
+                        </tr>
 
-
-
+                        No++;
+                    }
                 </tbody>
             </table>
         </div>
@@ -176,7 +118,6 @@
     </div>
 
     
-
     <script src="~/js/DownloadToExcel.js" asp-append-version="true"></script>
 
 </div>
