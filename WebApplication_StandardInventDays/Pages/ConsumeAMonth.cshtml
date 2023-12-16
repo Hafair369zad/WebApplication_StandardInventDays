@@ -4,6 +4,8 @@
 }
 
 
+<script src="~/js/consumeamonth.js"></script>
+
 <div class="container-fluid p-0">
     <div class="d-flex justify-content-between ">
         <div class="header-tittle">
@@ -15,10 +17,10 @@
                 <option value="SID" selected>STANDARD INVENTORY DAYS</option>
                 <option value="Negative">NEGATIVE LIST</option>
             </select>
-        </div>
+        </div>  
 
         <div class="dropdown-2">
-            <select class="custom-select" id="dropdownMenuButton2">
+            <select class="custom-select" id="dropdownVMINon">
                 <option value="VMI" selected>INVENTORY VMI</option>
                 <option value="NonVMI">INVENTORY NON VMI</option>
             </select>
@@ -43,7 +45,7 @@
                     <h5>Data Updated : 9/8/2023 7:36:56 AM</h5>
                 </div>
             </div>
-        </div>
+        </div>          
     </div>
 
     <div class="flex-fill w-100 h-100 mb-10">
@@ -51,122 +53,84 @@
             <table class="display" border="0" id="view-table">
                 <thead>
                     <tr>
-                        <th class="no-column">No</th>
-                        <th class="fac-column">Fac</th>
-                        <th class="itemno-column">Item No</th>
-                        <th class="itemdesc-column">Item Description</th>
-                        <th>UoM</th>
-                        <th>Vendor Type</th>
-                        <th>Prod Lead Time</th>
-                        <th>Monthly Consume</th>
-                        <th>Capacity Different</th>
-                        <th>Delivery Cycle</th>
-                        <th class="consume-column">Consume</th>
-                        <th>Reject</th>
-                        <th>MoQ</th>
-                        <th>Std Inventory Days</th>                    
+                        <th class="no-column" rowspan="2">No</th>
+                        <th class="itemno-column" rowspan="2">Item Number</th>
+                        <th class="itemdesc-column" rowspan="2">Item Description</th>
+                        <th rowspan="2">UoM</th>
+                        <th rowspan="2">MoQ</th>
+                        <th rowspan="2">I/L</th>
+                        <th rowspan="2">Std Price</th>
+                        <th rowspan="2">Std Invt Days</th>
+                        <th colspan="5" class="month-header">January</th>
+                        <th rowspan="2" class="AnlyHeader">Analysis & Action</th>
+                        <th colspan="4" class="month-header">February</th>
+                        <th colspan="4" class="month-header">Maret</th>
+                        <th colspan="1" class="month-header">April</th>
+                        <th colspan="2" class="month-header">Buyer</th>
+                    </tr>
+                    <tr>
+                        
+                        <th class="body-header">Consume</th>
+                        <th class="body-header">Reserved</th>
+                        <th class="body-header">Inventory Amount</th>
+                        <th class="body-header">Days</th>
+                        <th class="body-header">Different</th>
+                        
+                        <!-- Sub-headers for February -->
+                        <th class="body-header">Consume</th>
+                        <th class="body-header">Reserved</th>
+                        <th class="body-header">Inventory Amount</th>
+                        <th class="body-header">Days</th>
+                        <!-- Sub-headers for Maret -->
+                        <th class="body-header">Consume</th>
+                        <th class="body-header">Reserved</th>
+                        <th class="body-header">Inventory Amount</th>
+                        <th class="body-header">Days</th>
+                        <!-- Sub-headers for April -->
+                        <th class="body-header">Consume</th>
+                        <!-- Sub-headers for Buyer -->
+                        <th class="body-header">Code</th>
+                        <th class="body-header">Name</th>
+                       
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Fac 1</td>
-                        <td>Item001</td>
-                        <td>Product 1</td>
-                        <td>PCS</td>
-                        <td>Vendor A</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>10%</td>
-                        <td>30</td>
-                        <td>950000</td>
-                        <td>50</td>
-                        <td>200</td>
-                        <td>15</td>          
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Fac 2</td>
-                        <td>Item001</td>
-                        <td>Product 1</td>
-                        <td>PCS</td>
-                        <td>Vendor A</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>10%</td>
-                        <td>30</td>
-                        <td>950000</td>
-                        <td>50</td>
-                        <td>200</td>
-                        <td>15</td>                      
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Fac 3</td>
-                        <td>Item001</td>
-                        <td>Product 1</td>
-                        <td>PCS</td>
-                        <td>Vendor A</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>10%</td>
-                        <td>30</td>
-                        <td>950000</td>
-                        <td>50</td>
-                        <td>200</td>
-                        <td>15</td>                     
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Fac 4</td>
-                        <td>Item001</td>
-                        <td>Product 1</td>
-                        <td>PCS</td>
-                        <td>Vendor A</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>10%</td>
-                        <td>30</td>
-                        <td>950000</td>
-                        <td>50</td>
-                        <td>200</td>
-                        <td>15</td>                    
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Fac 5</td>
-                        <td>Item001</td>
-                        <td>Product 1</td>
-                        <td>PCS</td>
-                        <td>Vendor A</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>10%</td>
-                        <td>30</td>
-                        <td>950000</td>
-                        <td>50</td>
-                        <td>200</td>
-                        <td>15</td>                   
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Fac 6</td>
-                        <td>Item001</td>
-                        <td>Product 1</td>
-                        <td>PCS</td>
-                        <td>Vendor A</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>10%</td>
-                        <td>30</td>
-                        <td>950000</td>
-                        <td>50</td>
-                        <td>200</td>
-                        <td>15</td>                 
-                    </tr>
+                        <td class="item-number">DROP350JA0Z</td>
+                        <td class="item-description">AC CORD 350JA</td>
+                        <td class="uom">PC</td>
+                        <td class="moq">500</td>
+                        <td class="il">D</td>
+                        <td class="std-price">6,439</td>
+                        <td class="std-invt-days">13.3</td>
+                  
+                        <td class="january-sub-header">3.456</td>
+                        <td class="january-sub-header">1.89</td>
+                        <td class="january-sub-header">2.50</td>
+                        <td class="january-sub-header">-</td>
+                        <td class="january-sub-header">-</td>
 
-
-
+                        <!-- Sub-headers for Analysis & Action -->
+                        <td class="january-sub-header">-</td>
+                        <!-- Sub-headers for February -->
+                        <td class="january-sub-header">8.675</td>
+                        <td class="january-sub-header">6.374</td>
+                        <td class="january-sub-header">12.98</td>
+                        <td class="january-sub-header">-</td>
+                        <!-- Sub-headers for Maret -->
+                        <td class="january-sub-header">6.54</td>
+                        <td class="january-sub-header">0.00</td>
+                        <td class="january-sub-header">0.56</td>
+                        <td class="january-sub-header">46</td>
+                        <!-- Sub-headers for April -->
+                        <td class="january-sub-header">23.53</td>
+                        <!-- Sub-headers for Buyer -->
+                        <td class="january-sub-header">RWB</td>
+                        <td class="january-sub-header">SUGENG WIDODO</td>
+                        
+                    </tr>
+                    
                 </tbody>
             </table>
         </div>
@@ -183,13 +147,18 @@
 <script type="text/javascript">
     var js = jQuery.noConflict(true);
     js(document).ready(function () {
-        js('#view-table').DataTable({
+        var table = js('#view-table').DataTable({
             "paging": false,
             "columnDefs": [
                 { "orderable": true, "targets": [0] }, // Enable sorting for the first column (index 0)
-                { "orderable": false, "targets": "_all" } // Disable sorting for all other columns
+                { "orderable": true, "targets": "_all" } // Disable sorting for all other columns
             ]
         });
+
+
+        js('.dataTables_filter').addClass('fixed');
+
+
         js('.dataTables_filter input').attr('placeholder', 'Search...');
         js('.dataTables_filter label').prepend('<i class="fa fa-search"></i> ');
     });

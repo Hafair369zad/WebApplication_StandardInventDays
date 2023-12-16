@@ -31,6 +31,16 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+
+
+    @*Popup Logout*@
+    <div class="popup-logout" id="popup-logout">
+        <div class="popup-content-logout">
+            <p id="popup-message" style="font-weight: 800;margin-top: 15px;">Are you sure you want to logout?</p>
+            <button class="close-button-logout" onclick="logout()">Logout</button>
+            <button class="close-button-cancel" onclick="closePopup()">Cancel</button>
+        </div>
+    </div>
    
     <div class="wrapper">
         <div class="section">
@@ -40,11 +50,19 @@
                       <i class="fas fa-bars"></i>
                     </a>
                 </div>
+                <div class="nav-logout">
+                    <a href="javascript:void(0);" onclick="confirmLogout();">
+                        <i class='bx bx-log-out nav_icon'></i>
+                        <span class="nav_name">Logout</span>
+                    </a>
+                </div>
             </div>
             <div class="content">
                 @RenderBody()
                 @*@RenderSection("Scripts", required: false)*@
             </div>
+
+
         </div>
 
         <div class="sidebar">
@@ -110,6 +128,14 @@
                         <span class="item">Information</span>
                     </a>
                 </li>
+
+
+               @* <li>
+                    <a asp-area="" asp-page="/Page2">
+                        <span class="icon"><i class="fas fa-info-circle"></i></span>
+                        <span class="item">TestDashboard</span>
+                    </a>
+                </li>*@
              @*   <li>
                     <a asp-area="" asp-page="/AddData/Create">
                         <span class="icon"><i class="fas fa-info-circle"></i></span>
@@ -127,13 +153,15 @@
                 <h3>Panasonic</h3>
             </div>
         </div>
+       @* <div class="footer">
+            <!-- Footer content goes here -->
+            <p>&copy; 2023 Your Company Name</p>
+        </div>*@
     </div>
 
-   @*<footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - WebApplication_StandardInventDays - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>*@
+    
+   
+
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -144,3 +172,8 @@
 
 
 
+@*<footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - WebApplication_StandardInventDays - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>*@

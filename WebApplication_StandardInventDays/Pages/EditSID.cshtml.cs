@@ -32,6 +32,9 @@ namespace WebApplication_StandardInventDays.Pages
             }
             Sid = sid;
             ViewData["IdMatList"] = new SelectList(_context.MaterialLists, "IdMatList", "IdMatList");
+            ViewData["ItemNo"] = new SelectList(_context.MaterialLists, "ItemNo", "ItemNo");
+            ViewData["ItemDesc"] = new SelectList(_context.MaterialLists, "ItemDesc", "ItemDesc");
+            ViewData["UoM"] = new SelectList(_context.MaterialLists, "UoM", "UoM");
             return Page();
         }
 
@@ -68,6 +71,18 @@ namespace WebApplication_StandardInventDays.Pages
         private bool SidExists(string id)
         {
             return (_context.Sids?.Any(e => e.IdSid == id)).GetValueOrDefault();
+        }
+
+        public JsonResult OnGetGetMaterialList(string itemNo)
+        {
+            // Retrieve MaterialList data based on the selected 'ItemNo'
+            var materialList = _context.MaterialLists.FirstOrDefault(ml => ml.ItemNo == itemNo);
+
+            return new JsonResult(new
+            {
+                ItemDesc = materialList?.ItemDesc,
+                UoM = materialList?.UoM
+            });
         }
     }
 }

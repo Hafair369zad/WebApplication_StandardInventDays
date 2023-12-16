@@ -35,21 +35,28 @@ namespace WebApplication_StandardInventDays.Pages
         public Sid Sid { get; set; } = new Sid();
 
 
-        
+
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid || _context.Sids == null || Sid == null)
+            if (!ModelState.IsValid || Sid == null)
             {
                 return Page();
             }
 
+            // Fetch additional data from the database if needed
+            var materialList = _context.MaterialLists.FirstOrDefault(ml => ml.ItemNo == Sid.ItemNo);
+
+            Sid.ItemDesc = materialList?.ItemDesc;
+            Sid.UoM = materialList?.UoM;
+
+            // Save the form data to the database
             _context.Sids.Add(Sid);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("/View");
+            return RedirectToPage("/View"); // Redirect to the desired page after saving
         }
-
-
+        
+        
         public JsonResult OnGetGetMaterialList(string itemNo)
         {
             // Retrieve MaterialList data based on the selected 'ItemNo'

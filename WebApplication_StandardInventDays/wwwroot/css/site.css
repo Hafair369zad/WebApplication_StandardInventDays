@@ -137,6 +137,18 @@ body {
                 color: #fff;
             }
 
+        .wrapper .section .top_navbar .nav-logout a {
+            color: #D9D9D9;
+            text-decoration: none;
+            position: absolute;
+            top: 15px; /* Sesuaikan dengan jarak dari atas */
+            right: 250px; /* Sesuaikan dengan jarak dari kanan */
+        }
+
+        .wrapper .section .top_navbar .nav-logout a:hover {
+            color: #fff;
+        }
+
     .wrapper .section .content {
         margin-top: 75px;
         margin-left: 25px;
@@ -147,73 +159,86 @@ body {
         line-height: 28px;
     }
 
-body.active .wrapper .sidebar {
-    left: -215px;
-}
-
-body.active .wrapper .section {
-    margin-left: 0;
-    width: 100%;
-}
-
-
-.headerLogo {
-    padding-right: -14px;
-    background-color: #000;
-    margin-top: -20px;
-    font-size: 20px;
-}
-
-    .headerLogo img {
-        margin-top: -10px;
-        margin-bottom: -10px;
-        margin-left: 10px;
-        width: 130px;
-        height: 75px;
+    body.active .wrapper .sidebar {
+        left: -215px;
     }
 
+    body.active .wrapper .section {
+        margin-left: 0;
+        width: 100%;
+    }
+/*    body .wrapper .section .top_navbar .nav-logout {
+    margin-right: 210px;
+}*/
 
 
-
-
-.wrapper .sidebar .nav-bottom-brand {
+body.active .wrapper .section .top_navbar .nav-logout a {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    margin-left: 35px;
-    margin-bottom: 10px;
+    top:15px;
+    left: 1260px;
 }
-    .wrapper .sidebar .nav-bottom-brand h3 {
-        font-size: 25px;
-        color: white;
-        font-weight: 500;
-        font-family: "Arial Black";
-    }
 
 
-
-.header-tittle {
-    font-family: 'Inter';
-}
-    .header-tittle h2 {
-        font-weight: 800;
-        font-size: 30px;
-        margin-bottom: -5px;
-        letter-spacing: 0px;
-    }
-    .header-tittle p {
-        font-weight: 600;
-        font-size: 12px;
-        margin-top: -8px;
-        letter-spacing: 0px;
-    }
-    .header-tittle .ByAMonth {
+    .headerLogo {
+        padding-right: -14px;
+        background-color: #000;
+        margin-top: -20px;
         font-size: 20px;
-        margin-bottom: 5px;
-        text-transform: uppercase;
-        font-weight: 800;
-        
     }
+
+        .headerLogo img {
+            margin-top: -10px;
+            margin-bottom: -10px;
+            margin-left: 10px;
+            width: 130px;
+            height: 75px;
+        }
+
+
+
+
+
+    .wrapper .sidebar .nav-bottom-brand {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-left: 35px;
+        margin-bottom: 10px;
+    }
+
+        .wrapper .sidebar .nav-bottom-brand h3 {
+            font-size: 25px;
+            color: white;
+            font-weight: 500;
+            font-family: "Arial Black";
+        }
+
+
+
+    .header-tittle {
+        font-family: 'Inter';
+    }
+
+        .header-tittle h2 {
+            font-weight: 800;
+            font-size: 30px;
+            margin-bottom: -5px;
+            letter-spacing: 0px;
+        }
+
+        .header-tittle p {
+            font-weight: 600;
+            font-size: 12px;
+            margin-top: -8px;
+            letter-spacing: 0px;
+        }
+
+        .header-tittle .ByAMonth {
+            font-size: 20px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
 
 
     .button-header {
@@ -222,17 +247,17 @@ body.active .wrapper .section {
         right: 25px; /* Sesuaikan dengan jarak dari kanan */
     }
 
-    .button-header a {
-        padding: 8px 6px;
-        text-decoration: none;
-        color: #fff;
-        background: #1861AC;
-        border-radius: 10px;
-    }
+        .button-header a {
+            padding: 8px 6px;
+            text-decoration: none;
+            color: #fff;
+            background: #1861AC;
+            border-radius: 10px;
+        }
 
-    .button-header a:hover {
-        background: #33363F;
-    }
+            .button-header a:hover {
+                background: #33363F;
+            }
 
         .button-header i {
             font-size: 12px;
@@ -241,564 +266,582 @@ body.active .wrapper .section {
 
 
 
-.dropdown-1 select {
-    margin-left: 130px;
-    margin-right: 2px;
-    padding: 8px;
-    background-color: #33363F;
-    border-radius: 10px;
-    color: #fff;
-    font-family: 'Inter';
-}
-.dropdown-2 select {
-    padding: 8px;
-    background-color: #27ae60;
-    border-radius: 10px;
-    color: #fff;
-    font-family: 'Inter';
-} 
-
-@media (max-width: 767px) {
-  .d-flex.justify-content-between {
-    flex-direction: column;
-  }
     .dropdown-1 select {
-        margin-left: 0px;
-        margin-bottom: 5px;
-    }
-
-    .headcttn1,
-    .headcttn2,
-    .headcttn3 {
-        flex-direction: column;
-        margin-top: 10px;
-        padding: 100px;
-        margin-bottom: 200px;
-    }
-}
-
-@media (max-width: 767px) {
-    .button-header {
-        position: relative;
-        top: 0;
-        right: 0;
-        margin-top: 10px; /* Sesuaikan jarak antara tombol dan teks */
-    }
-}
-
-
-.headcttn1 {
-    padding: 5px;
-    background: #A50808;
-    margin-top: 45px;
-    margin-bottom: -40px;
-    margin-left: 5px;
-    color: white;
-    border-radius: 5px;
-}
-.headcttn2 {
-    padding: 5px;
-    background: #76768D;
-    margin-left: -10px;
-    margin-top: 45px;
-    margin-bottom: -40px;
-    color: white;
-    border-radius: 5px;
-}
-.headcttn3 {
-    padding: 5px;
-    background: #174779;
-    margin-left: -10px;
-    margin-top: 45px;
-    margin-bottom: -40px;
-    color: white;
-    border-radius: 5px;
-}
-    .headcttn1 h5,
-    .headcttn2 h5,
-    .headcttn3 h5 {
-        margin-top: 5px;
-        margin-bottom: 5px;
-        font-size: 13px;
-        text-align: center;
-        font-weight: 700;
-        
-    }
-    .card-cr {
-    /*margin: 10px;*/
-    background: white;
-    border: 1px solid;
-    border-color: #dddddd; /* Warna border */
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Efek shadow */
-}
-
-    .card-cr .header-form-card {
-        padding-top: 5px;
-        padding-bottom: 5px;
-        text-align: center;
-        background: #33363F;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-    }
-    
-
-.card-cr .header-form-card h2 {
-    color: #fff;
-    font-size: 25px;
-    font-family: 'Inter';
-    font-weight: 900;
-    margin-top: 5px;
-}
-
-    .card-cr .row {
-        margin-top: 20px;
-        margin-left: 2px;
+        margin-left: 130px;
         margin-right: 2px;
-        margin-bottom: 20px;
+        padding: 8px;
+        background-color: #33363F;
+        border-radius: 10px;
+        color: #fff;
+        font-family: 'Inter';
+    }
+
+    .dropdown-2 select {
+        padding: 8px;
+        background-color: #27ae60;
+        border-radius: 10px;
+        color: #fff;
+        font-family: 'Inter';
+    }
+
+    @media (max-width: 767px) {
+        .d-flex.justify-content-between {
+            flex-direction: column;
+        }
+
+        .dropdown-1 select {
+            margin-left: 0px;
+            margin-bottom: 5px;
+        }
+
+        .headcttn1,
+        .headcttn2,
+        .headcttn3 {
+            flex-direction: column;
+            margin-top: 15px;
+            padding: 100px;    
+        }
+    }
+
+    @media (max-width: 767px) {
+        .button-header {
+            position: relative;
+            top: 0;
+            right: 0;
+            margin-top: 10px; /* Sesuaikan jarak antara tombol dan teks */
+        }
     }
 
 
-/*Form Inputan*/
-.upload-form label {
-    font-family: 'Inter';
-    font-weight: 800;
-    font-size: 15px;
-   /* margin-top: -10px;*/
-}
+    .headcttn1 {
+        padding: 5px;
+        background: #A50808;
+        margin-top: 60px;
+        margin-bottom: -40px;
+        margin-left: 5px;
+        color: white;
+        border-radius: 5px;
+    }
 
-.upload-form input {
-    /*margin-top: -10px;*/
-    border: solid 1px #1D5D9B;
-    border-radius: 5px;
-    color: #001C30;
-    font-size: 15px;
-    font-weight: 600;
-    font-family: 'Inter';
-}
+    .headcttn2 {
+        padding: 5px;
+        background: #76768D;
+        margin-left: -10px;
+        margin-top: 60px;
+        margin-bottom: -40px;
+        color: white;
+        border-radius: 5px;
+    }
 
-    .upload-form input::placeholder {
-        color: #33363F;
+    .headcttn3 {
+        padding: 5px;
+        background: #174779;
+        margin-left: -10px;
+        margin-top: 60px;
+        margin-bottom: -40px;
+        color: white;
+        border-radius: 5px;
+    }
+
+        .headcttn1 h5,
+        .headcttn2 h5,
+        .headcttn3 h5 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 13px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+    .card-cr {
+        /*margin: 10px;*/
+        background: white;
+        border: 1px solid;
+        border-color: #dddddd; /* Warna border */
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Efek shadow */
+    }
+
+        .card-cr .header-form-card {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-align: center;
+            background: #33363F;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+
+            .card-cr .header-form-card h2 {
+                color: #fff;
+                font-size: 25px;
+                font-family: 'Inter';
+                font-weight: 900;
+                margin-top: 5px;
+            }
+
+        .card-cr .row {
+            margin-top: 20px;
+            margin-left: 2px;
+            margin-right: 2px;
+            margin-bottom: 20px;
+        }
+
+
+    /*Form Inputan*/
+    .upload-form label {
         font-family: 'Inter';
-        opacity: 0.4;
+        font-weight: 800;
+        font-size: 15px;
+        /* margin-top: -10px;*/
+    }
+
+    .upload-form input {
+        /*margin-top: -10px;*/
+        border: solid 1px #1D5D9B;
+        border-radius: 5px;
+        color: #001C30;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: 'Inter';
+    }
+
+        .upload-form input::placeholder {
+            color: #33363F;
+            font-family: 'Inter';
+            opacity: 0.4;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+    #hasil {
+        background-color: #DDFFDF;
+        border: solid 1px #808080;
+        border-radius: 5px;
+    }
+
+
+    .upload-form select {
+        border: solid 1px #1D5D9B;
         font-size: 15px;
         font-weight: 600;
     }
-#hasil {
-    background-color: #DDFFDF;
-    border: solid 1px #808080;
-    border-radius: 5px;
-}
+    /*End Form Inputan*/
 
 
-.upload-form select {
-    border: solid 1px #1D5D9B;
-    font-size: 15px;
-    font-weight: 600;
-}
-/*End Form Inputan*/
-
-
-/*Button Form Inputan*/
-.button-AddData {
-    display: flex;
-    justify-content: right;
-    margin-top: 130px;
-    margin-right: 20px;
-}
-    .button-AddData a#processButton {
-        margin-right: 10px;
-        background: #1D5D9B;
-        border-radius: 6px;
-        font-weight: 600;
-        width: 100px;
-    }
-    .button-AddData a#cancelButton {
-        border-color: #bd0c0cf2;
-        margin-right: 10px;
-        border-radius: 6px;
-        font-weight: 600;
-        width: 100px;
-    }
-    .button-AddData a#clearButton {
-        border-color: #bd0c0cf2;
-        margin-right: 10px;
-        border-radius: 6px;
-        font-weight: 600;
-        width: 100px;
-    }
-    .button-AddData input {
-        background-color: #27ae60;
-        border-radius: 6px;
-        font-weight: 600;
-        width: 100px;
-        margin-right: 10px; 
-    }
-
-@media (max-width: 767px) {
+    /*Button Form Inputan*/
     .button-AddData {
         display: flex;
-        justify-content: center;
-        border-radius: 6px;
-        font-weight: 600;
-        margin-bottom: 10px;
+        justify-content: right;
+        margin-top: 130px;
+        margin-right: 20px;
     }
-}
-@media (max-width: 465px) {
-    .button-AddData {
-        flex-direction: column;
-        /*display: flex;*/
-        align-items: center;
-        margin-bottom: 20px;
-        border-radius: 6px;
-        font-weight: 600;
-        justify-content: center;
-    }
+
         .button-AddData a#processButton {
-            margin-bottom: 20px;
+            margin-right: 10px;
+            background: #1D5D9B;
             border-radius: 6px;
             font-weight: 600;
-            width: 150px;
+            width: 100px;
         }
 
         .button-AddData a#cancelButton {
-            margin-bottom: 20px;
+            border-color: #bd0c0cf2;
+            margin-right: 10px;
             border-radius: 6px;
             font-weight: 600;
-            width: 150px;
+            width: 100px;
         }
+
         .button-AddData a#clearButton {
-            margin-bottom: 20px;
+            border-color: #bd0c0cf2;
+            margin-right: 10px;
             border-radius: 6px;
             font-weight: 600;
-            width: 150px;
-            margin-right: -10px;
+            width: 100px;
         }
 
         .button-AddData input {
+            background-color: #27ae60;
+            border-radius: 6px;
+            font-weight: 600;
+            width: 100px;
+            margin-right: 10px;
+        }
+
+    @media (max-width: 767px) {
+        .button-AddData {
+            display: flex;
+            justify-content: center;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+    }
+
+    @media (max-width: 465px) {
+        .button-AddData {
+            flex-direction: column;
+            /*display: flex;*/
+            align-items: center;
             margin-bottom: 20px;
             border-radius: 6px;
             font-weight: 600;
-            width: 150px;
-            margin-left: -10px;
-            margin-right: 10px;
+            justify-content: center;
         }
-}
+
+            .button-AddData a#processButton {
+                margin-bottom: 20px;
+                border-radius: 6px;
+                font-weight: 600;
+                width: 150px;
+            }
+
+            .button-AddData a#cancelButton {
+                margin-bottom: 20px;
+                border-radius: 6px;
+                font-weight: 600;
+                width: 150px;
+            }
+
+            .button-AddData a#clearButton {
+                margin-bottom: 20px;
+                border-radius: 6px;
+                font-weight: 600;
+                width: 150px;
+                margin-right: -10px;
+            }
+
+            .button-AddData input {
+                margin-bottom: 20px;
+                border-radius: 6px;
+                font-weight: 600;
+                width: 150px;
+                margin-left: -10px;
+                margin-right: 10px;
+            }
+    }
 
 
-/*Header Chard Chart*/
-.half-color-card {
-    display: flex;
-    width: 100%;
-    border-radius: 10px;
-}
+    /*Header Chard Chart*/
+    .half-color-card {
+        display: flex;
+        width: 100%;
+        border-radius: 10px;
+    }
 
-.top-background {
-    color: white;
-    flex: 1;
-    padding: 1.5rem; /* Atur padding sesuai kebutuhan */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    display: flex;
-    align-items: center; /* Mengatur elemen secara vertikal tengah */
-    justify-content: space-between;
-}
-.card-title{
-    margin: 0;
-}
+    .top-background {
+        color: white;
+        flex: 1;
+        padding: 1.5rem; /* Atur padding sesuai kebutuhan */
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        display: flex;
+        align-items: center; /* Mengatur elemen secara vertikal tengah */
+        justify-content: space-between;
+    }
 
-.white-background {
-    background-color: white;
-    flex: 1;
-    padding: 1.5rem; /* Atur padding sesuai kebutuhan */
-    border-radius: 10px;
-    position: relative;
-}
+    .card-title {
+        margin: 0;
+    }
 
-.red-background,
-.progress-barLOC 
-{
-    background-color: #A64E4E;
-}
-.green-background,
-.progress-barIMP 
-{
-    background-color: #4EA652;
-}
-.purple-background,
-.progress-barALL 
-{
-    background-color: #383858;
-}
+    .white-background {
+        background-color: white;
+        flex: 1;
+        padding: 1.5rem; /* Atur padding sesuai kebutuhan */
+        border-radius: 10px;
+        position: relative;
+    }
 
-.progress-bar {
-    height: 15px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 25px;
-    right: 20px;
-    margin-top: 0px;
-    margin-bottom: 5px;
-    max-width: calc(100% - 45px); /* Mengatur maksimum lebar progress bar */
-    overflow: hidden; /* Mengatasi overflow */
-}
+    .red-background,
+    .progress-barLOC {
+        background-color: #A64E4E;
+    }
 
+    .green-background,
+    .progress-barIMP {
+        background-color: #4EA652;
+    }
 
-.label-left {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    margin-top: 17px;
-    transform: translateY(-50%);
-    font-size: 13px;
-}
+    .purple-background,
+    .progress-barALL {
+        background-color: #383858;
+    }
 
-.label-right {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    margin-top: 17px;
-    transform: translateY(-50%);
-    font-size: 13px;
-}
+    .progress-bar {
+        height: 15px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 25px;
+        right: 20px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        max-width: calc(100% - 45px); /* Mengatur maksimum lebar progress bar */
+        overflow: hidden; /* Mengatasi overflow */
+    }
 
 
+    .label-left {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        margin-top: 17px;
+        transform: translateY(-50%);
+        font-size: 13px;
+    }
 
-.header-chart h5 {
-    font-weight: 800;
-    margin-bottom: -5px;
-    font-size: 25px;
-}
-.header-chart p {
-    font-weight: 500;
-    margin-top: -10px;
-    margin-left: 2px;
-    font-size: 15px;
-}
-
-#grafik2 {
-    margin-top: 73px;
-    margin-bottom: 20px;
-}
-
-/*button pilih type*/
-.btn-typeChart {
-    background-color: #1D5D9B;
-    padding: 6px 6px;
-}
-
-.btn-typeChart:hover {
-    background-color: #33363F;
-}
+    .label-right {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: 17px;
+        transform: translateY(-50%);
+        font-size: 13px;
+    }
 
 
-.chartFirst .card-title {
-    font-size: 48px;
-    font-weight: 700;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+
+    .header-chart h5 {
+        font-weight: 800;
+        margin-bottom: -5px;
+        font-size: 25px;
+    }
+
+    .header-chart p {
+        font-weight: 500;
+        margin-top: -10px;
+        margin-left: 2px;
+        font-size: 15px;
+    }
+
+    #grafik2 {
+        margin-top: 73px;
+        margin-bottom: 20px;
+    }
+
+    /*button pilih type*/
+    .btn-typeChart {
+        background-color: #1D5D9B;
+        padding: 6px 6px;
+    }
+
+        .btn-typeChart:hover {
+            background-color: #33363F;
+        }
 
 
-/*donut chart*/
-/* CSS untuk progress bar pertama (circle-1) */
-.circle-1 {
-    border-color: #3498db;
-}
+    .chartFirst .card-title {
+        font-size: 48px;
+        font-weight: 700;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-    .circle-1 .progress-circle {
+
+    /*donut chart*/
+    /* CSS untuk progress bar pertama (circle-1) */
+    .circle-1 {
         border-color: #3498db;
     }
 
-/* CSS untuk progress bar kedua (circle-2) */
-.circle-2 {
-    border-color: #e74c3c;
-}
+        .circle-1 .progress-circle {
+            border-color: #3498db;
+        }
 
-    .circle-2 .progress-circle {
+    /* CSS untuk progress bar kedua (circle-2) */
+    .circle-2 {
         border-color: #e74c3c;
     }
 
-/* CSS untuk progress bar ketiga (circle-3) */
-.circle-3 {
-    border-color: #27ae60;
-}
+        .circle-2 .progress-circle {
+            border-color: #e74c3c;
+        }
 
-    .circle-3 .progress-circle {
+    /* CSS untuk progress bar ketiga (circle-3) */
+    .circle-3 {
         border-color: #27ae60;
     }
 
-/* CSS untuk progress label */
-.progress-label {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff; /* Warna teks putih untuk label */
-}
+        .circle-3 .progress-circle {
+            border-color: #27ae60;
+        }
 
-/* CSS untuk container progress */
-.progress-container {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-}
+    /* CSS untuk progress label */
+    .progress-label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff; /* Warna teks putih untuk label */
+    }
 
-/* CSS untuk ring progress */
-.progress-ring {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: 10px solid #ccc; /* Warna default untuk ring */
-    border-radius: 50%;
-    position: relative;
-}
+    /* CSS untuk container progress */
+    .progress-container {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
 
-/* CSS untuk lingkaran progress */
-.progress-circle {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: 10px solid transparent;
-    border-radius: 50%;
-    clip-path: polygon(50% 0%, 100% 0%, 100% 100%);
-    transform: rotate(90deg);
-    transform-origin: center;
-}
+    /* CSS untuk ring progress */
+    .progress-ring {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: 10px solid #ccc; /* Warna default untuk ring */
+        border-radius: 50%;
+        position: relative;
+    }
+
+    /* CSS untuk lingkaran progress */
+    .progress-circle {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: 10px solid transparent;
+        border-radius: 50%;
+        clip-path: polygon(50% 0%, 100% 0%, 100% 100%);
+        transform: rotate(90deg);
+        transform-origin: center;
+    }
 
 
 
-/*Table View Data*/
+    /*Table View Data*/
 
 .ViewTable {
+    width: 100%;
     margin: 3px;
     overflow-x: auto;
 }
 
-.ViewTable table {
-    width: 100%;
-    border-radius: 10px;
-}
+        .ViewTable table {
+            width: 100%;
+            border-radius: 10px;
+            
+        }
 
-.ViewTable th, td {
-    padding: 8px;
-    text-align: left;
-}
-    .ViewTable td, th{
-        font-size: 13px;
-    }
+        .ViewTable th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        .ViewTable td, th {
+            font-size: 12px;
+        }
 
     .ViewTable thead {
-        background-color: black;
+        background-color: #33363F;
         color: white;
     }
 
-.ViewTable th:last-child {
-    border-radius: 0 8px 0 0;
-    padding: 10px;
-}
-    .ViewTable th:first-child {
-        border-radius: 8px 0 0 0;
-    }
-
-.ViewTable tbody tr:hover {
-    background-color: #f5f5f5;
-}
-
-    .ViewTable td .edit-icon {
-        text-decoration: none;
-        color: #1861AC;
-        font-size: 15px;
-    }
-    .ViewTable td .delete-icon {
-        text-decoration: none;
-        color: #A50808;
-        font-size: 15px;
-    }
-    .ViewTable th.fac-column {
-        padding: 15px;
-    }
-    .ViewTable th.itemno-column {
-        padding: 15px;
-    }
-    .ViewTable th.itemdesc-column {
-        padding: 15px;
-    }
-    .ViewTable th.no-column {
-        padding: 5px;
-    }
-    .ViewTable th.consume-column {
-        padding: 5px;
-    }
-    .ViewTable th.action-column {
-        padding: 15px;
-    }
-
-
-    @media (max-width: 768px) {
-        .card-cr {
-           overflow: auto; /* Add scroll to the card when needed */
+        .ViewTable th:last-child {
+            border-radius: 0 0px 0 0;
+            padding: 10px;
         }
-        
-    }
 
-.text-size-buttons {
-    display: flex;
-    align-items: center;
-}
+        .ViewTable th:first-child {
+            border-radius: 0px 0 0 0;
+        }
 
-    .text-size-buttons button#increase-text-size {
-      color: darkblue;
-    }
-    .text-size-buttons button#decrease-text-size {
-        color: darkred;
-    }
+        .ViewTable tbody tr:hover {
+            background-color: #f5f5f5;
+        }
 
-    .text-size-buttons button {
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 20px;
-        margin: 0 5px;
-        padding: 0;
-        color: #333; /* Adjust the color as needed */
-    }
+        .ViewTable td .edit-icon {
+            text-decoration: none;
+            color: #1861AC;
+            font-size: 15px;
+        }
 
-/* Styling for the table headers and cells */
-.ViewExcel td,
-.ViewExcel th {
+        .ViewTable td .delete-icon {
+            text-decoration: none;
+            color: #A50808;
+            font-size: 15px;
+        }
+
+        .ViewTable th.fac-column {
+            padding: 15px;
+        }
+
+        .ViewTable th.itemno-column {
+            padding: 15px;
+        }
+
+        .ViewTable th.itemdesc-column {
+            padding: 15px;
+        }
+
+        .ViewTable th.no-column {
+            padding: 5px;
+        }
+
+        .ViewTable th.consume-column {
+            padding: 5px;
+        }
+
+        .ViewTable th.action-column {
+            padding: 15px;
+        }
+
+.month-header[colspan] {
     text-align: center;
-    font-size: 10px;
+    border-bottom: 0.5px solid #fff;
+    border-left: 0.5px solid #fff;
+    /*border-right: 0.5px solid #fff;*/
 }
-
-/*Information Page*/
-.card-cr .header-form-info {
-   
-    background: #33363F;
-    border-radius: 7px;
-    display: flex;
-    justify-content: center; /* Mengatur konten horizontal di tengah */
-    align-items: center;
+.AnlyHeader[rowspan] {
+    text-align: center;
+    border-left: 0.5px solid #fff;
+    /*border-right: 0.5px solid #fff;*/
 }
-.info-head {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    display: flex;
-    gap: 20px;
+.body-header,
+.body-header3M {
+    border-left: 0.5px solid #fff;
 }
-    .info-head .info-img1 {
-        margin-left: -40px;
-    }
-    .info-head .info-img2 {
-        margin-left: 200px;
-    }
-
 
 @media (max-width: 768px) {
+    .card-cr {
+            overflow: auto; /* Add scroll to the card when needed */
+        }
+    }
+
+    .text-size-buttons {
+        display: flex;
+        align-items: center;
+    }
+
+        .text-size-buttons button#increase-text-size {
+            color: darkblue;
+        }
+
+        .text-size-buttons button#decrease-text-size {
+            color: darkred;
+        }
+
+        .text-size-buttons button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            margin: 0 5px;
+            padding: 0;
+            color: #333; /* Adjust the color as needed */
+        }
+
+    /* Styling for the table headers and cells */
+    .ViewExcel td,
+    .ViewExcel th {
+        text-align: center;
+        font-size: 10px;
+    }
+
+    /*Information Page*/
     .card-cr .header-form-info {
+        background: #33363F;
+        border-radius: 7px;
         display: flex;
         justify-content: center; /* Mengatur konten horizontal di tengah */
         align-items: center;
@@ -807,222 +850,326 @@ body.active .wrapper .section {
     .info-head {
         margin-top: 100px;
         margin-bottom: 100px;
-    }
-    .info-head .info-img1 {
-        margin-left: 0px;
-        margin-bottom: 50px;
+        display: flex;
+        gap: 20px;
     }
 
-    .info-head .info-img2 {
-        margin-left: 0px;
-        margin-left: 50px;
-    }
-}
+        .info-head .info-img1 {
+            margin-left: -40px;
+        }
+
+        .info-head .info-img2 {
+            margin-left: 200px;
+        }
 
 
-.info-form p{
-    font-weight: 600;
-    font-size: 15px;
-    margin: 10px;
-}
+    @media (max-width: 768px) {
+        .card-cr .header-form-info {
+            display: flex;
+            justify-content: center; /* Mengatur konten horizontal di tengah */
+            align-items: center;
+        }
 
-.info-form .info-form-address {
-    margin-top: 100px;
-}
+        .info-head {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
 
+            .info-head .info-img1 {
+                margin-left: 0px;
+                margin-bottom: 50px;
+            }
 
-
-
-
-/*POPUP*/
-/* Styling for the floating button */
-.download-float-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
-
-    .download-float-button button {
-        background-color: #1D5D9B;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        width: 130px;
-        height: 40px;
-        font-size: 16px;
-        cursor: pointer;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+            .info-head .info-img2 {
+                margin-left: 0px;
+                margin-left: 50px;
+            }
     }
 
-    .download-float-button button:hover {
-        background-color: #1D5D9B;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        width: 131px;
-        height: 41px;
-        font-size: 16px;
-        cursor: pointer;
-        box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.5);
+
+    .info-form p {
+        font-weight: 600;
+        font-size: 15px;
+        margin: 10px;
+    }
+
+    .info-form .info-form-address {
+        margin-top: 100px;
     }
 
 
 
-/* Styling for the popup */
-.popup {
-    display: none;
-    position: fixed;
-    top: 50%; /* Mengatur posisi vertikal ke tengah halaman */
-    left: 50%; /* Mengatur posisi horizontal ke tengah halaman */
-    transform: translate(-50%, -50%); /* Menggeser popup ke tengah */
-    width: 500px;
-    height: 250px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
 
-.popup-content {
-    padding: 20px;
-}
 
-.popup-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-}
-
-    .popup-header h3 {
-        margin: 0;
-        font-weight: 800;
+    /*POPUP*/
+    /* Styling for the floating button */
+    .download-float-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
     }
 
-.popup-body {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10px;
-}
+        .download-float-button button {
+            background-color: #1D5D9B;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            width: 130px;
+            height: 40px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+        }
 
-.popup select {
-    margin-bottom: 10px;
-    padding: 5px;
-    width: 100%;
-    font-size: 15px;
-    font-weight: 700;
-    color: #000;
-    background-color: #f0f0f0;
-}
+            .download-float-button button:hover {
+                background-color: #1D5D9B;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                width: 131px;
+                height: 41px;
+                font-size: 16px;
+                cursor: pointer;
+                box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.5);
+            }
 
-.popup button#download-button {
-    margin-top: 40px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    width: 200px;
-    padding: 5px 10px;
-    cursor: pointer;
-    box-shadow: none;
-}
-    .popup button#download-button:hover {
+
+
+    /* Styling for the popup */
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%; /* Mengatur posisi vertikal ke tengah halaman */
+        left: 50%; /* Mengatur posisi horizontal ke tengah halaman */
+        transform: translate(-50%, -50%); /* Menggeser popup ke tengah */
+        width: 500px;
+        height: 250px;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .popup-content {
+        padding: 20px;
+    }
+
+    .popup-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+        .popup-header h3 {
+            margin: 0;
+            font-weight: 800;
+        }
+
+    .popup-body {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+    }
+
+    .popup select {
+        margin-bottom: 10px;
+        padding: 5px;
+        width: 100%;
+        font-size: 15px;
+        font-weight: 700;
+        color: #000;
+        background-color: #f0f0f0;
+    }
+
+    .popup button#download-button {
         margin-top: 40px;
         background-color: #007bff;
         color: #fff;
         border: none;
-        width: 201px;
+        width: 200px;
         padding: 5px 10px;
         cursor: pointer;
         box-shadow: none;
     }
 
-/* Styling for close button */
-.close-popup {
-    padding: 1px;
-    margin-right: 0px;
-    background: none;
-    border: none;
-    font-size: 30px;
-    color: #000;
-    cursor: pointer;
-}
-#overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang semi-transparan */
-    z-index: 0;
-}
-
-
-/* Mengubah tampilan kotak pencarian */
-.dataTables_filter {
-    float: right; /* Posisikan input ke kanan */
-    margin-bottom: 10px; /*Jarak dari tabel*/
-    /*margin-top: -45px;
-    margin-right: 10px;*/
-}
-
-    /* Gaya input pencarian */
-    .dataTables_filter input {
-        border: 10px solid #1D5D9B;
-        border-radius: 25px;
-        padding: 10px 20px; /* Tambahkan ruang di dalam input */
-        width: 250px;
-        background-color: #1D5D9B; /* Latar belakang putih */
-        color: #333; /* Warna teks */
-        transition: all 0.3s ease; /* Animasi perubahan warna dan border */
-        font-size: 16px; /* Ukuran font */
-    }
-
-    .dataTables_filter label {
-        color: #33363F;
-        font-weight: 700;
-        font-size: 15px;
-
-    }
-
-    /* Gaya input pencarian saat fokus */
-    .dataTables_filter input:focus {
-        outline: none;
-        border-color: #33363F;
-        box-shadow: 0 0 8px rgba(29, 93, 155, 0.7);
-    }
-
-    /* Gaya placeholder di dalam input */
-    .dataTables_filter input::placeholder {
-        color: #33363F; /* Warna placeholder */
-    }
-
-    /* Tombol cari (Opsional) */
-    .dataTables_filter button {
-        background-color: #33363F;
-        color: #33363F;
-        border: none;
-        border-radius: 25px;
-        padding: 10px 20px;
-        /*margin-left: 10px;*/
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-        .dataTables_filter button:hover {
-            background-color: #33363F; /* Warna saat tombol dihover */
+        .popup button#download-button:hover {
+            margin-top: 40px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            width: 201px;
+            padding: 5px 10px;
+            cursor: pointer;
+            box-shadow: none;
         }
 
+    /* Styling for close button */
+    .close-popup {
+        padding: 1px;
+        margin-right: 0px;
+        background: none;
+        border: none;
+        font-size: 30px;
+        color: #000;
+        cursor: pointer;
+    }
+
+    #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang semi-transparan */
+        z-index: 0;
+    }
+
+
+    /* Mengubah tampilan kotak pencarian */
+    .dataTables_filter {
+        float: right;   
+    }
+
+        .dataTables_filter.fixed {
+            position: relative;
+            margin-bottom: 20px;
+            z-index: 1000;
+        }
+
+        /* Gaya input pencarian */
+        .dataTables_filter input {
+            border: 10px solid #1D5D9B;
+            border-radius: 25px;
+            padding: 10px 20px; 
+            width: 250px;
+            background-color: #1D5D9B; 
+            color: #333; 
+            transition: all 0.3s ease; 
+            font-size: 16px; 
+
+        }
+
+        .dataTables_filter label {
+            color: #33363F;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        /* Gaya input pencarian saat fokus */
+        .dataTables_filter input:focus {
+            outline: none;
+            border-color: #33363F;
+            box-shadow: 0 0 8px rgba(29, 93, 155, 0.7);
+        }
+
+        /* Gaya placeholder di dalam input */
+        .dataTables_filter input::placeholder {
+            color: #33363F; /* Warna placeholder */
+        }
+
+        /* Tombol cari (Opsional) */
+        .dataTables_filter button {
+            background-color: #33363F;
+            color: #33363F;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            /*margin-left: 10px;*/
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .dataTables_filter button:hover {
+                background-color: #33363F; /* Warna saat tombol dihover */
+            }
 
 
 
+    /*Popup Logout*/
+    .popup-logout {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .popup-content-logout {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 30px;
+        width: 400px;
+        height: 180px;
+        text-align: center;
+        border-radius: 20px;
+    }
+
+    .close-button-cancel {
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        color: #000;
+        border: 0.5px groove #888;
+        font-weight: 600;
+        margin-left: 3px;
+    }
+
+    .close-button-logout {
+        margin-top: 10px;
+        padding: 6px 11px;
+        background-color: #1D5D9B;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        color: whitesmoke;
+        font-weight: 600;
+        margin-right: 3px;
+    }
+    /*End Popup Logout*/
+
+    /*Footer*/
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+    /*End Footer*/
 
 
-/*Dark Mode*/
-/*:root.dark-mode {
+/*Delete Page*/
+.DelPage h3{
+    font-size: 18px;
+}
+/*.bttnback{
+    padding: 5px 10px;
+    background-color: #1D5D9B;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+}*/
+/*End Delete Page*/
+
+
+    /*Dark Mode*/
+    /*:root.dark-mode {
     --background-color-light: #333;
     --text-color-light: #fff;
     --sidebar-bg-light: #174779;
@@ -1039,8 +1186,8 @@ body.dark-mode {
 }*/
 
 
-/* Gaya CSS untuk tombol switch */
-/*.dark-mode-toggle {
+    /* Gaya CSS untuk tombol switch */
+    /*.dark-mode-toggle {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -1058,7 +1205,7 @@ body.dark-mode {
         width: 40px;
         height: 20px;
         background: #ccc;*/ /* Warna latar belakang switch non-aktif */
-        /*border-radius: 25px;
+    /*border-radius: 25px;
         position: relative;
         transition: background-color 0.3s ease;
     }
@@ -1072,7 +1219,7 @@ body.dark-mode {
         width: 20px;
         height: 20px;
         background: #fff;*/ /* Warna pegangan switch */
-        /*border-radius: 50%;
+    /*border-radius: 50%;
         position: absolute;
         top: 0;
         left: 0;

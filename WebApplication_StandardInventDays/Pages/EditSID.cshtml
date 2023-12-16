@@ -45,7 +45,7 @@
                         <div class="form-group row">
                             <label asp-for="Sid.Fac" class="col-form-label col-md-3">Fac</label>
                             <div class="col-md-9">
-                                <input asp-for="Sid.Fac" class="form-control" placeholder="Enter Fac">
+                                <input asp-for="Sid.Fac" class="form-control" placeholder="Enter Fac" id="Sid_Fac" readonly>
                                 <span asp-validation-for="Sid.Fac" class="text-danger"></span>
                             </div>
                         </div>
@@ -53,14 +53,14 @@
                         <div class="form-group row">
                             <label asp-for="Sid.ItemNo" class="col-form-label col-md-3">Item Number</label>
                             <div class="col-md-9">
-                                <select asp-for="Sid.ItemNo" class="form-control" asp-items="ViewBag.ItemNo"></select>
+                                <select asp-for="Sid.ItemNo" class="form-control" asp-items="ViewBag.ItemNo" id="Sid_ItemNo" onchange="fetchMaterialListData(this.value)"></select>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label asp-for="Sid.ItemDesc" class="col-form-label col-md-3">Item Desc</label>
                             <div class="col-md-9">
-                                <input asp-for="Sid.ItemDesc" class="form-control" placeholder="Enter Item Desc">
+                                <input asp-for="Sid.ItemDesc" class="form-control" placeholder="Enter Item Desc" id="Sid_ItemDesc" readonly>
                                 <span asp-validation-for="Sid.ItemDesc" class="text-danger"></span>
                             </div>
                         </div>
@@ -68,7 +68,7 @@
                         <div class="form-group row">
                             <label asp-for="Sid.UoM" class="col-form-label col-md-3">UoM</label>
                             <div class="col-md-9">
-                                <input asp-for="Sid.UoM" class="form-control" placeholder="Enter UoM">
+                                <input asp-for="Sid.UoM" class="form-control" placeholder="Enter UoM" id="Sid_UoM" readonly>
                                 <span asp-validation-for="Sid.UoM" class="text-danger"></span>
                             </div>
                         </div>
@@ -149,7 +149,7 @@
                         <div class="form-group row">
                             <label for="listInput" class="col-form-label col-md-3">Formula</label>
                             <div class="col-md-9">
-                                <select class="form-control" id="listInput" name="formula">
+                                <select class="form-control" id="listInputForm" name="formula">
                                     <option value="">-Pilihan-</option>
                                     <option value="Formula1">Formula 1</option>
                                     <option value="Formula2">Formula 2</option>
@@ -177,6 +177,61 @@
         </form>
     </div>
 </div>
+
+
+<script>
+    function roundNumber(number, precision) {
+        var factor = Math.pow(10, precision);
+        return Math.round(number * factor) / factor;
+    }
+
+    $("#processButton").click(function (e) {
+        e.preventDefault();
+
+
+        // Fetch values from the form
+        var prodLt = parseFloat($("#Sid_ProdLt").val());
+        var capacityDifferent = parseFloat($("#Sid_CapacityDifferent").val());
+        var deliveryCycle = parseFloat($("#Sid_DeliveryCycle").val());
+        var consumption = parseFloat($("#Sid_Consumption").val());
+        var reject = parseFloat($("#Sid_Reject").val());
+        var moQ = parseFloat($("#Sid_MoQ").val());
+        var monthlyConsume = parseFloat($("#Sid_MonthlyConsume").val());
+
+        var formula = $("#listInputForm").val();
+
+        if (formula === "Formula1") {
+            var x1 = roundNumber((prodLt + capacityDifferent + deliveryCycle - consumption) * (1 + (reject / 100)), 1);
+            var x2 = roundNumber((((moQ / monthlyConsume) * 30) - consumption), 1);
+
+            $("#hasil").val(x1 > x2 ? x1 : x2);
+        } else if (formula === "Formula2") {
+            $("#hasil").val(roundNumber((prodLt + capacityDifferent + deliveryCycle - consumption) * (1 + (reject / 100)), 1));
+        } else {
+            alert("Please select a valid formula.");
+        }
+    });
+
+    $("#clearButton").click(function (e) {
+        e.preventDefault();
+        $('#Sid_Fac, #Sid_ItemDesc, #Sid_UoM, #Sid_Hasil').prop('readonly', true);
+        $("form")[0].reset();
+        $("#hasil").val("");
+    });
+
+    function fetchMaterialListData(itemNo) {
+        $.ajax({
+            type: 'GET',
+            url: '/EditSID=GetMaterialList',
+            data: { itemNo: itemNo },
+            success: function (data) {
+                $('#Sid_ItemDesc').val(data.itemDesc).prop('readonly', true);
+                $('#Sid_UoM').val(data.uoM).prop('readonly', true);
+            }
+        });
+    }
+</script>
+
 @*
 @section Scripts {
     @{

@@ -258,7 +258,23 @@ $(document).ready(function () {
 });
 
 
+// Logout Popup
+function confirmLogout() {
+    // Tampilkan popup konfirmasi
+    document.getElementById("popup-logout").style.display = "block";
+}
 
+function closePopup() {
+    // Tutup popup
+    document.getElementById("popup-logout").style.display = "none";
+}
+
+//function logout() {
+//    // Redirect ke halaman logout jika user mengkonfirmasi logout
+//    window.location.href = '@Url.Action("Logout", "Home")';
+//}
+
+// End Logout Popup 
 
 // Process Add_Data
 
